@@ -1,0 +1,16 @@
+{
+  "snapshot_date": "2026-10-07",
+  "universe": "S&P 500",
+  "rows": 503,
+  "unique_symbols": 503,
+  "unique_sectors": 11,
+  "duplicate_symbols": 0,
+  "provider_symbol_mappings": {
+    "BF.B": "BF-B",
+    "BRK.B": "BRK-B"
+  },
+  "source_repository": "datasets/s-and-p-500-companies",
+  "source_path": "data/constituents.csv",
+  "source_blob_sha": "f940bc2577b8d2df2392ee88394eab85a4a41285",
+  "source_note": "Used as a mirror of the current S&P 500 constituent table because the local runtime could not resolve en.wikipedia.org."
+}
