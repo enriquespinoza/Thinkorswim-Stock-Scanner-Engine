@@ -218,3 +218,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Scanner generated artifacts
+tokens/
+*.token
+data/raw/*.csv
+data/processed/*.csv
+reports/scans/*.csv
