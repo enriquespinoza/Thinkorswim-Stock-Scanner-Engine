@@ -47,4 +47,4 @@ def test_benchmark_alignment_does_not_forward_fill_missing_dates() -> None:
     result = add_benchmark_features(features, benchmark, "spy")
     target_date = asset.loc[300, "timestamp"]
     row = result.loc[result["timestamp"] == target_date].iloc[0]
-    assert pd.isna(row["corr_spy_60d"]) or np.isfinite(row["corr_spy_60d"])
+    assert pd.isna(row["corr_spy_60d"])
