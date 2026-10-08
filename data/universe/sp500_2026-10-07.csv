@@ -120,7 +120,6 @@ CSGP,CSGP,CoStar Group,Real Estate,Real Estate Services,datasets_sp500_wikipedia
 CSX,CSX,CSX Corporation,Industrials,Rail Transportation,datasets_sp500_wikipedia_mirror
 CTAS,CTAS,Cintas,Industrials,Diversified Support Services,datasets_sp500_wikipedia_mirror
 CTSH,CTSH,Cognizant,Information Technology,IT Consulting & Other Services,datasets_sp500_wikipedia_mirror
-CTVA,CTVA,Corteva,Materials,Fertilizers & Agricultural Chemicals,datasets_sp500_wikipedia_mirror
 CVNA,CVNA,Carvana,Consumer Discretionary,Automotive Retail,datasets_sp500_wikipedia_mirror
 CVS,CVS,CVS Health,Health Care,Health Care Services,datasets_sp500_wikipedia_mirror
 CVX,CVX,Chevron Corporation,Energy,Integrated Oil & Gas,datasets_sp500_wikipedia_mirror
@@ -378,7 +377,6 @@ PPG,PPG,PPG Industries,Materials,Specialty Chemicals,datasets_sp500_wikipedia_mi
 PPL,PPL,PPL Corporation,Utilities,Electric Utilities,datasets_sp500_wikipedia_mirror
 PRU,PRU,Prudential Financial,Financials,Life & Health Insurance,datasets_sp500_wikipedia_mirror
 PSA,PSA,Public Storage,Real Estate,Self-Storage REITs,datasets_sp500_wikipedia_mirror
-PSKY,PSKY,Paramount Skydance Corporation,Communication Services,Movies & Entertainment,datasets_sp500_wikipedia_mirror
 PSX,PSX,Phillips 66,Energy,Oil & Gas Refining & Marketing,datasets_sp500_wikipedia_mirror
 PTC,PTC,PTC Inc.,Information Technology,Application Software,datasets_sp500_wikipedia_mirror
 PWR,PWR,Quanta Services,Industrials,Construction & Engineering,datasets_sp500_wikipedia_mirror
@@ -405,6 +403,7 @@ SBUX,SBUX,Starbucks,Consumer Discretionary,Restaurants,datasets_sp500_wikipedia_
 SCHW,SCHW,Charles Schwab Corporation,Financials,Investment Banking & Brokerage,datasets_sp500_wikipedia_mirror
 SHW,SHW,Sherwin-Williams,Materials,Specialty Chemicals,datasets_sp500_wikipedia_mirror
 SJM,SJM,J.M. Smucker Company (The),Consumer Staples,Packaged Foods & Meats,datasets_sp500_wikipedia_mirror
+SKYD,SKYD,Skydance Corporation,Communication Services,Movies & Entertainment,official_corporate_action_overlay
 SLB,SLB,Schlumberger,Energy,Oil & Gas Equipment & Services,datasets_sp500_wikipedia_mirror
 SMCI,SMCI,Supermicro,Information Technology,"Technology Hardware, Storage & Peripherals",datasets_sp500_wikipedia_mirror
 SNA,SNA,Snap-on,Industrials,Industrial Machinery & Supplies & Components,datasets_sp500_wikipedia_mirror
@@ -449,6 +448,7 @@ TSLA,TSLA,"Tesla, Inc.",Consumer Discretionary,Automobile Manufacturers,datasets
 TSN,TSN,Tyson Foods,Consumer Staples,Packaged Foods & Meats,datasets_sp500_wikipedia_mirror
 TT,TT,Trane Technologies,Industrials,Building Products,datasets_sp500_wikipedia_mirror
 TTWO,TTWO,Take-Two Interactive,Communication Services,Interactive Home Entertainment,datasets_sp500_wikipedia_mirror
+TWLO,TWLO,Twilio Inc.,Information Technology,,official_spglobal_action_overlay
 TXN,TXN,Texas Instruments,Information Technology,Semiconductors,datasets_sp500_wikipedia_mirror
 TXT,TXT,Textron,Industrials,Aerospace & Defense,datasets_sp500_wikipedia_mirror
 TYL,TYL,Tyler Technologies,Information Technology,Application Software,datasets_sp500_wikipedia_mirror
@@ -476,10 +476,10 @@ VRTX,VRTX,Vertex Pharmaceuticals,Health Care,Biotechnology,datasets_sp500_wikipe
 VST,VST,Vistra Corp.,Utilities,Electric Utilities,datasets_sp500_wikipedia_mirror
 VTR,VTR,Ventas,Real Estate,Health Care REITs,datasets_sp500_wikipedia_mirror
 VTRS,VTRS,Viatris,Health Care,Pharmaceuticals,datasets_sp500_wikipedia_mirror
+VYLR,VYLR,Vylor Inc.,Consumer Staples,,official_spglobal_action_overlay
 VZ,VZ,Verizon,Communication Services,Integrated Telecommunication Services,datasets_sp500_wikipedia_mirror
 WAB,WAB,Wabtec,Industrials,Construction Machinery & Heavy Transportation Equipment,datasets_sp500_wikipedia_mirror
 WAT,WAT,Waters Corporation,Health Care,Life Sciences Tools & Services,datasets_sp500_wikipedia_mirror
-WBD,WBD,Warner Bros. Discovery,Communication Services,Broadcasting,datasets_sp500_wikipedia_mirror
 WDAY,WDAY,"Workday, Inc.",Information Technology,Application Software,datasets_sp500_wikipedia_mirror
 WDC,WDC,Western Digital,Information Technology,"Technology Hardware, Storage & Peripherals",datasets_sp500_wikipedia_mirror
 WEC,WEC,WEC Energy Group,Utilities,Electric Utilities,datasets_sp500_wikipedia_mirror
