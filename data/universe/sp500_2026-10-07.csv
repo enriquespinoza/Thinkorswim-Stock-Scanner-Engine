@@ -1,0 +1,504 @@
+symbol,provider_symbol,name,sector,industry,source
+A,A,Agilent Technologies,Health Care,Life Sciences Tools & Services,datasets_sp500_wikipedia_mirror
+AAPL,AAPL,Apple Inc.,Information Technology,"Technology Hardware, Storage & Peripherals",datasets_sp500_wikipedia_mirror
+ABBV,ABBV,AbbVie,Health Care,Biotechnology,datasets_sp500_wikipedia_mirror
+ABNB,ABNB,Airbnb,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",datasets_sp500_wikipedia_mirror
+ABT,ABT,Abbott Laboratories,Health Care,Health Care Equipment,datasets_sp500_wikipedia_mirror
+ACGL,ACGL,Arch Capital Group,Financials,Property & Casualty Insurance,datasets_sp500_wikipedia_mirror
+ACN,ACN,Accenture,Information Technology,IT Consulting & Other Services,datasets_sp500_wikipedia_mirror
+ADBE,ADBE,Adobe Inc.,Information Technology,Application Software,datasets_sp500_wikipedia_mirror
+ADI,ADI,Analog Devices,Information Technology,Semiconductors,datasets_sp500_wikipedia_mirror
+ADM,ADM,Archer Daniels Midland,Consumer Staples,Agricultural Products & Services,datasets_sp500_wikipedia_mirror
+ADP,ADP,Automatic Data Processing,Industrials,Human Resource & Employment Services,datasets_sp500_wikipedia_mirror
+ADSK,ADSK,Autodesk,Information Technology,Application Software,datasets_sp500_wikipedia_mirror
+AEE,AEE,Ameren,Utilities,Multi-Utilities,datasets_sp500_wikipedia_mirror
+AEP,AEP,American Electric Power,Utilities,Electric Utilities,datasets_sp500_wikipedia_mirror
+AES,AES,AES Corporation,Utilities,Independent Power Producers & Energy Traders,datasets_sp500_wikipedia_mirror
+AFL,AFL,Aflac,Financials,Life & Health Insurance,datasets_sp500_wikipedia_mirror
+AIG,AIG,American International Group,Financials,Multi-line Insurance,datasets_sp500_wikipedia_mirror
+AIZ,AIZ,Assurant,Financials,Multi-line Insurance,datasets_sp500_wikipedia_mirror
+AJG,AJG,Arthur J. Gallagher & Co.,Financials,Insurance Brokers,datasets_sp500_wikipedia_mirror
+AKAM,AKAM,Akamai Technologies,Information Technology,Internet Services & Infrastructure,datasets_sp500_wikipedia_mirror
+ALB,ALB,Albemarle Corporation,Materials,Specialty Chemicals,datasets_sp500_wikipedia_mirror
+ALGN,ALGN,Align Technology,Health Care,Health Care Supplies,datasets_sp500_wikipedia_mirror
+ALL,ALL,Allstate,Financials,Property & Casualty Insurance,datasets_sp500_wikipedia_mirror
+ALLE,ALLE,Allegion,Industrials,Building Products,datasets_sp500_wikipedia_mirror
+AMAT,AMAT,Applied Materials,Information Technology,Semiconductor Materials & Equipment,datasets_sp500_wikipedia_mirror
+AMCR,AMCR,Amcor,Materials,Paper & Plastic Packaging Products & Materials,datasets_sp500_wikipedia_mirror
+AMD,AMD,Advanced Micro Devices,Information Technology,Semiconductors,datasets_sp500_wikipedia_mirror
+AME,AME,Ametek,Industrials,Electrical Components & Equipment,datasets_sp500_wikipedia_mirror
+AMGN,AMGN,Amgen,Health Care,Biotechnology,datasets_sp500_wikipedia_mirror
+AMP,AMP,Ameriprise Financial,Financials,Asset Management & Custody Banks,datasets_sp500_wikipedia_mirror
+AMT,AMT,American Tower,Real Estate,Telecom Tower REITs,datasets_sp500_wikipedia_mirror
+AMZN,AMZN,Amazon,Consumer Discretionary,Broadline Retail,datasets_sp500_wikipedia_mirror
+ANET,ANET,Arista Networks,Information Technology,Communications Equipment,datasets_sp500_wikipedia_mirror
+AON,AON,Aon plc,Financials,Insurance Brokers,datasets_sp500_wikipedia_mirror
+AOS,AOS,A. O. Smith,Industrials,Building Products,datasets_sp500_wikipedia_mirror
+APA,APA,APA Corporation,Energy,Oil & Gas Exploration & Production,datasets_sp500_wikipedia_mirror
+APD,APD,Air Products,Materials,Industrial Gases,datasets_sp500_wikipedia_mirror
+APH,APH,Amphenol,Information Technology,Electronic Components,datasets_sp500_wikipedia_mirror
+APO,APO,Apollo Global Management,Financials,Asset Management & Custody Banks,datasets_sp500_wikipedia_mirror
+APP,APP,AppLovin,Communication Services,Advertising,datasets_sp500_wikipedia_mirror
+APTV,APTV,Aptiv,Consumer Discretionary,Automotive Parts & Equipment,datasets_sp500_wikipedia_mirror
+ARE,ARE,Alexandria Real Estate Equities,Real Estate,Office REITs,datasets_sp500_wikipedia_mirror
+ARES,ARES,Ares Management,Financials,Asset Management & Custody Banks,datasets_sp500_wikipedia_mirror
+ATO,ATO,Atmos Energy,Utilities,Gas Utilities,datasets_sp500_wikipedia_mirror
+AVGO,AVGO,Broadcom,Information Technology,Semiconductors,datasets_sp500_wikipedia_mirror
+AVY,AVY,Avery Dennison,Materials,Paper & Plastic Packaging Products & Materials,datasets_sp500_wikipedia_mirror
+AWK,AWK,American Water Works,Utilities,Water Utilities,datasets_sp500_wikipedia_mirror
+AXON,AXON,Axon Enterprise,Industrials,Aerospace & Defense,datasets_sp500_wikipedia_mirror
+AXP,AXP,American Express,Financials,Consumer Finance,datasets_sp500_wikipedia_mirror
+AZO,AZO,AutoZone,Consumer Discretionary,Automotive Retail,datasets_sp500_wikipedia_mirror
+BA,BA,Boeing,Industrials,Aerospace & Defense,datasets_sp500_wikipedia_mirror
+BAC,BAC,Bank of America,Financials,Diversified Banks,datasets_sp500_wikipedia_mirror
+BALL,BALL,Ball Corporation,Materials,"Metal, Glass & Plastic Containers",datasets_sp500_wikipedia_mirror
+BAX,BAX,Baxter International,Health Care,Health Care Equipment,datasets_sp500_wikipedia_mirror
+BBY,BBY,Best Buy,Consumer Discretionary,Computer & Electronics Retail,datasets_sp500_wikipedia_mirror
+BDX,BDX,Becton Dickinson,Health Care,Health Care Equipment,datasets_sp500_wikipedia_mirror
+BE,BE,Bloom Energy,Industrials,Electrical Components & Equipment,datasets_sp500_wikipedia_mirror
+BEN,BEN,Franklin Resources,Financials,Asset Management & Custody Banks,datasets_sp500_wikipedia_mirror
+BF.B,BF-B,Brown–Forman,Consumer Staples,Distillers & Vintners,datasets_sp500_wikipedia_mirror
+BG,BG,Bunge Global,Consumer Staples,Agricultural Products & Services,datasets_sp500_wikipedia_mirror
+BIIB,BIIB,Biogen,Health Care,Biotechnology,datasets_sp500_wikipedia_mirror
+BKNG,BKNG,Booking Holdings,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",datasets_sp500_wikipedia_mirror
+BKR,BKR,Baker Hughes,Energy,Oil & Gas Equipment & Services,datasets_sp500_wikipedia_mirror
+BLK,BLK,BlackRock,Financials,Asset Management & Custody Banks,datasets_sp500_wikipedia_mirror
+BMY,BMY,Bristol Myers Squibb,Health Care,Pharmaceuticals,datasets_sp500_wikipedia_mirror
+BNY,BNY,BNY Mellon,Financials,Asset Management & Custody Banks,datasets_sp500_wikipedia_mirror
+BR,BR,Broadridge Financial Solutions,Industrials,Data Processing & Outsourced Services,datasets_sp500_wikipedia_mirror
+BRK.B,BRK-B,Berkshire Hathaway,Financials,Multi-Sector Holdings,datasets_sp500_wikipedia_mirror
+BRO,BRO,Brown & Brown,Financials,Insurance Brokers,datasets_sp500_wikipedia_mirror
+BSX,BSX,Boston Scientific,Health Care,Health Care Equipment,datasets_sp500_wikipedia_mirror
+BX,BX,Blackstone Inc.,Financials,Asset Management & Custody Banks,datasets_sp500_wikipedia_mirror
+BXP,BXP,"BXP, Inc.",Real Estate,Office REITs,datasets_sp500_wikipedia_mirror
+C,C,Citigroup,Financials,Diversified Banks,datasets_sp500_wikipedia_mirror
+CAH,CAH,Cardinal Health,Health Care,Health Care Distributors,datasets_sp500_wikipedia_mirror
+CARR,CARR,Carrier Global,Industrials,Building Products,datasets_sp500_wikipedia_mirror
+CASY,CASY,Casey's,Consumer Staples,Food Retail,datasets_sp500_wikipedia_mirror
+CAT,CAT,Caterpillar Inc.,Industrials,Construction Machinery & Heavy Transportation Equipment,datasets_sp500_wikipedia_mirror
+CB,CB,Chubb Limited,Financials,Property & Casualty Insurance,datasets_sp500_wikipedia_mirror
+CBOE,CBOE,Cboe Global Markets,Financials,Financial Exchanges & Data,datasets_sp500_wikipedia_mirror
+CBRE,CBRE,CBRE Group,Real Estate,Real Estate Services,datasets_sp500_wikipedia_mirror
+CCI,CCI,Crown Castle,Real Estate,Telecom Tower REITs,datasets_sp500_wikipedia_mirror
+CCL,CCL,Carnival Corporation,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",datasets_sp500_wikipedia_mirror
+CDNS,CDNS,Cadence Design Systems,Information Technology,Application Software,datasets_sp500_wikipedia_mirror
+CDW,CDW,CDW Corporation,Information Technology,Technology Distributors,datasets_sp500_wikipedia_mirror
+CEG,CEG,Constellation Energy,Utilities,Electric Utilities,datasets_sp500_wikipedia_mirror
+CF,CF,CF Industries,Materials,Fertilizers & Agricultural Chemicals,datasets_sp500_wikipedia_mirror
+CFG,CFG,Citizens Financial Group,Financials,Regional Banks,datasets_sp500_wikipedia_mirror
+CHD,CHD,Church & Dwight,Consumer Staples,Household Products,datasets_sp500_wikipedia_mirror
+CHRW,CHRW,C.H. Robinson,Industrials,Air Freight & Logistics,datasets_sp500_wikipedia_mirror
+CHTR,CHTR,Charter Communications,Communication Services,Cable & Satellite,datasets_sp500_wikipedia_mirror
+CI,CI,Cigna,Health Care,Health Care Services,datasets_sp500_wikipedia_mirror
+CIEN,CIEN,Ciena,Information Technology,Communications Equipment,datasets_sp500_wikipedia_mirror
+CINF,CINF,Cincinnati Financial,Financials,Property & Casualty Insurance,datasets_sp500_wikipedia_mirror
+CL,CL,Colgate-Palmolive,Consumer Staples,Household Products,datasets_sp500_wikipedia_mirror
+CLX,CLX,Clorox,Consumer Staples,Household Products,datasets_sp500_wikipedia_mirror
+CMCSA,CMCSA,Comcast,Communication Services,Cable & Satellite,datasets_sp500_wikipedia_mirror
+CME,CME,CME Group,Financials,Financial Exchanges & Data,datasets_sp500_wikipedia_mirror
+CMG,CMG,Chipotle Mexican Grill,Consumer Discretionary,Restaurants,datasets_sp500_wikipedia_mirror
+CMI,CMI,Cummins,Industrials,Construction Machinery & Heavy Transportation Equipment,datasets_sp500_wikipedia_mirror
+CMS,CMS,CMS Energy,Utilities,Multi-Utilities,datasets_sp500_wikipedia_mirror
+CNC,CNC,Centene Corporation,Health Care,Managed Health Care,datasets_sp500_wikipedia_mirror
+CNP,CNP,CenterPoint Energy,Utilities,Multi-Utilities,datasets_sp500_wikipedia_mirror
+COF,COF,Capital One,Financials,Consumer Finance,datasets_sp500_wikipedia_mirror
+COHR,COHR,Coherent Corp.,Information Technology,Electronic Components,datasets_sp500_wikipedia_mirror
+COIN,COIN,Coinbase,Financials,Financial Exchanges & Data,datasets_sp500_wikipedia_mirror
+COO,COO,Cooper Companies (The),Health Care,Health Care Supplies,datasets_sp500_wikipedia_mirror
+COP,COP,ConocoPhillips,Energy,Oil & Gas Exploration & Production,datasets_sp500_wikipedia_mirror
+COR,COR,Cencora,Health Care,Health Care Distributors,datasets_sp500_wikipedia_mirror
+COST,COST,Costco,Consumer Staples,Consumer Staples Merchandise Retail,datasets_sp500_wikipedia_mirror
+CPAY,CPAY,Corpay,Financials,Transaction & Payment Processing Services,datasets_sp500_wikipedia_mirror
+CPRT,CPRT,Copart,Industrials,Diversified Support Services,datasets_sp500_wikipedia_mirror
+CPT,CPT,Camden Property Trust,Real Estate,Multi-Family Residential REITs,datasets_sp500_wikipedia_mirror
+CRH,CRH,CRH plc,Materials,Construction Materials,datasets_sp500_wikipedia_mirror
+CRL,CRL,Charles River Laboratories,Health Care,Life Sciences Tools & Services,datasets_sp500_wikipedia_mirror
+CRM,CRM,Salesforce,Information Technology,Application Software,datasets_sp500_wikipedia_mirror
+CRWD,CRWD,CrowdStrike,Information Technology,Systems Software,datasets_sp500_wikipedia_mirror
+CSCO,CSCO,Cisco,Information Technology,Communications Equipment,datasets_sp500_wikipedia_mirror
+CSGP,CSGP,CoStar Group,Real Estate,Real Estate Services,datasets_sp500_wikipedia_mirror
+CSX,CSX,CSX Corporation,Industrials,Rail Transportation,datasets_sp500_wikipedia_mirror
+CTAS,CTAS,Cintas,Industrials,Diversified Support Services,datasets_sp500_wikipedia_mirror
+CTSH,CTSH,Cognizant,Information Technology,IT Consulting & Other Services,datasets_sp500_wikipedia_mirror
+CVNA,CVNA,Carvana,Consumer Discretionary,Automotive Retail,datasets_sp500_wikipedia_mirror
+CVS,CVS,CVS Health,Health Care,Health Care Services,datasets_sp500_wikipedia_mirror
+CVX,CVX,Chevron Corporation,Energy,Integrated Oil & Gas,datasets_sp500_wikipedia_mirror
+D,D,Dominion Energy,Utilities,Multi-Utilities,datasets_sp500_wikipedia_mirror
+DAL,DAL,Delta Air Lines,Industrials,Passenger Airlines,datasets_sp500_wikipedia_mirror
+DASH,DASH,DoorDash,Consumer Discretionary,Specialized Consumer Services,datasets_sp500_wikipedia_mirror
+DD,DD,DuPont,Industrials,Industrial Conglomerates,datasets_sp500_wikipedia_mirror
+DDOG,DDOG,Datadog,Information Technology,Application Software,datasets_sp500_wikipedia_mirror
+DE,DE,Deere & Company,Industrials,Agricultural & Farm Machinery,datasets_sp500_wikipedia_mirror
+DECK,DECK,Deckers Brands,Consumer Discretionary,Footwear,datasets_sp500_wikipedia_mirror
+DELL,DELL,Dell Technologies,Information Technology,"Technology Hardware, Storage & Peripherals",datasets_sp500_wikipedia_mirror
+DG,DG,Dollar General,Consumer Staples,Consumer Staples Merchandise Retail,datasets_sp500_wikipedia_mirror
+DGX,DGX,Quest Diagnostics,Health Care,Health Care Services,datasets_sp500_wikipedia_mirror
+DHI,DHI,D. R. Horton,Consumer Discretionary,Homebuilding,datasets_sp500_wikipedia_mirror
+DHR,DHR,Danaher Corporation,Health Care,Life Sciences Tools & Services,datasets_sp500_wikipedia_mirror
+DIS,DIS,Walt Disney Company (The),Communication Services,Movies & Entertainment,datasets_sp500_wikipedia_mirror
+DLR,DLR,Digital Realty,Real Estate,Data Center REITs,datasets_sp500_wikipedia_mirror
+DLTR,DLTR,Dollar Tree,Consumer Staples,Consumer Staples Merchandise Retail,datasets_sp500_wikipedia_mirror
+DOC,DOC,Healthpeak Properties,Real Estate,Health Care REITs,datasets_sp500_wikipedia_mirror
+DOV,DOV,Dover Corporation,Industrials,Industrial Machinery & Supplies & Components,datasets_sp500_wikipedia_mirror
+DOW,DOW,Dow Inc.,Materials,Commodity Chemicals,datasets_sp500_wikipedia_mirror
+DPZ,DPZ,Domino's,Consumer Discretionary,Restaurants,datasets_sp500_wikipedia_mirror
+DRI,DRI,Darden Restaurants,Consumer Discretionary,Restaurants,datasets_sp500_wikipedia_mirror
+DTE,DTE,DTE Energy,Utilities,Multi-Utilities,datasets_sp500_wikipedia_mirror
+DUK,DUK,Duke Energy,Utilities,Electric Utilities,datasets_sp500_wikipedia_mirror
+DVA,DVA,DaVita,Health Care,Health Care Services,datasets_sp500_wikipedia_mirror
+DVN,DVN,Devon Energy,Energy,Oil & Gas Exploration & Production,datasets_sp500_wikipedia_mirror
+DXCM,DXCM,Dexcom,Health Care,Health Care Equipment,datasets_sp500_wikipedia_mirror
+EBAY,EBAY,eBay Inc.,Consumer Discretionary,Broadline Retail,datasets_sp500_wikipedia_mirror
+ECHO,ECHO,EchoStar,Communication Services,Wireless Telecommunication Services,datasets_sp500_wikipedia_mirror
+ECL,ECL,Ecolab,Materials,Specialty Chemicals,datasets_sp500_wikipedia_mirror
+ED,ED,Consolidated Edison,Utilities,Multi-Utilities,datasets_sp500_wikipedia_mirror
+EFX,EFX,Equifax,Industrials,Research & Consulting Services,datasets_sp500_wikipedia_mirror
+EG,EG,Everest Group,Financials,Reinsurance,datasets_sp500_wikipedia_mirror
+EIX,EIX,Edison International,Utilities,Electric Utilities,datasets_sp500_wikipedia_mirror
+EL,EL,Estée Lauder Companies (The),Consumer Staples,Personal Care Products,datasets_sp500_wikipedia_mirror
+ELV,ELV,Elevance Health,Health Care,Managed Health Care,datasets_sp500_wikipedia_mirror
+EME,EME,Emcor,Industrials,Construction & Engineering,datasets_sp500_wikipedia_mirror
+EMR,EMR,Emerson Electric,Industrials,Electrical Components & Equipment,datasets_sp500_wikipedia_mirror
+EOG,EOG,EOG Resources,Energy,Oil & Gas Exploration & Production,datasets_sp500_wikipedia_mirror
+EQIX,EQIX,Equinix,Real Estate,Data Center REITs,datasets_sp500_wikipedia_mirror
+EQT,EQT,EQT Corporation,Energy,Oil & Gas Exploration & Production,datasets_sp500_wikipedia_mirror
+ERIE,ERIE,Erie Indemnity,Financials,Insurance Brokers,datasets_sp500_wikipedia_mirror
+ES,ES,Eversource Energy,Utilities,Electric Utilities,datasets_sp500_wikipedia_mirror
+ESS,ESS,Essex Property Trust,Real Estate,Multi-Family Residential REITs,datasets_sp500_wikipedia_mirror
+ETN,ETN,Eaton Corporation,Industrials,Electrical Components & Equipment,datasets_sp500_wikipedia_mirror
+ETR,ETR,Entergy,Utilities,Electric Utilities,datasets_sp500_wikipedia_mirror
+EVRG,EVRG,Evergy,Utilities,Electric Utilities,datasets_sp500_wikipedia_mirror
+EW,EW,Edwards Lifesciences,Health Care,Health Care Equipment,datasets_sp500_wikipedia_mirror
+EXC,EXC,Exelon,Utilities,Electric Utilities,datasets_sp500_wikipedia_mirror
+EXE,EXE,Expand Energy,Energy,Oil & Gas Exploration & Production,datasets_sp500_wikipedia_mirror
+EXPD,EXPD,Expeditors International,Industrials,Air Freight & Logistics,datasets_sp500_wikipedia_mirror
+EXPE,EXPE,Expedia Group,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",datasets_sp500_wikipedia_mirror
+EXR,EXR,Extra Space Storage,Real Estate,Self-Storage REITs,datasets_sp500_wikipedia_mirror
+F,F,Ford Motor Company,Consumer Discretionary,Automobile Manufacturers,datasets_sp500_wikipedia_mirror
+FANG,FANG,Diamondback Energy,Energy,Oil & Gas Exploration & Production,datasets_sp500_wikipedia_mirror
+FAST,FAST,Fastenal,Industrials,Trading Companies & Distributors,datasets_sp500_wikipedia_mirror
+FCX,FCX,Freeport-McMoRan,Materials,Copper,datasets_sp500_wikipedia_mirror
+FDS,FDS,FactSet,Financials,Financial Exchanges & Data,datasets_sp500_wikipedia_mirror
+FDX,FDX,FedEx,Industrials,Air Freight & Logistics,datasets_sp500_wikipedia_mirror
+FDXF,FDXF,FedEx Freight,Industrials,Cargo Ground Transportation,datasets_sp500_wikipedia_mirror
+FE,FE,FirstEnergy,Utilities,Electric Utilities,datasets_sp500_wikipedia_mirror
+FERG,FERG,Ferguson Enterprises,Industrials,Trading Companies & Distributors,datasets_sp500_wikipedia_mirror
+FFIV,FFIV,"F5, Inc.",Information Technology,Communications Equipment,datasets_sp500_wikipedia_mirror
+FICO,FICO,Fair Isaac,Information Technology,Application Software,datasets_sp500_wikipedia_mirror
+FIS,FIS,Fidelity National Information Services,Financials,Transaction & Payment Processing Services,datasets_sp500_wikipedia_mirror
+FISV,FISV,Fiserv,Financials,Transaction & Payment Processing Services,datasets_sp500_wikipedia_mirror
+FITB,FITB,Fifth Third Bancorp,Financials,Regional Banks,datasets_sp500_wikipedia_mirror
+FIX,FIX,Comfort Systems USA,Industrials,Construction & Engineering,datasets_sp500_wikipedia_mirror
+FLEX,FLEX,Flex Ltd.,Information Technology,Electronic Manufacturing Services,datasets_sp500_wikipedia_mirror
+FOX,FOX,Fox Corporation (Class B),Communication Services,Broadcasting,datasets_sp500_wikipedia_mirror
+FOXA,FOXA,Fox Corporation (Class A),Communication Services,Broadcasting,datasets_sp500_wikipedia_mirror
+FRT,FRT,Federal Realty Investment Trust,Real Estate,Retail REITs,datasets_sp500_wikipedia_mirror
+FSLR,FSLR,First Solar,Information Technology,Semiconductors,datasets_sp500_wikipedia_mirror
+FTNT,FTNT,Fortinet,Information Technology,Systems Software,datasets_sp500_wikipedia_mirror
+FTV,FTV,Fortive,Industrials,Industrial Machinery & Supplies & Components,datasets_sp500_wikipedia_mirror
+GD,GD,General Dynamics,Industrials,Aerospace & Defense,datasets_sp500_wikipedia_mirror
+GDDY,GDDY,GoDaddy,Information Technology,Internet Services & Infrastructure,datasets_sp500_wikipedia_mirror
+GE,GE,GE Aerospace,Industrials,Aerospace & Defense,datasets_sp500_wikipedia_mirror
+GEHC,GEHC,GE HealthCare,Health Care,Health Care Equipment,datasets_sp500_wikipedia_mirror
+GEN,GEN,Gen Digital,Information Technology,Systems Software,datasets_sp500_wikipedia_mirror
+GEV,GEV,GE Vernova,Industrials,Heavy Electrical Equipment,datasets_sp500_wikipedia_mirror
+GILD,GILD,Gilead Sciences,Health Care,Biotechnology,datasets_sp500_wikipedia_mirror
+GIS,GIS,General Mills,Consumer Staples,Packaged Foods & Meats,datasets_sp500_wikipedia_mirror
+GL,GL,Globe Life,Financials,Life & Health Insurance,datasets_sp500_wikipedia_mirror
+GLW,GLW,Corning Inc.,Information Technology,Electronic Components,datasets_sp500_wikipedia_mirror
+GM,GM,General Motors,Consumer Discretionary,Automobile Manufacturers,datasets_sp500_wikipedia_mirror
+GNRC,GNRC,Generac,Industrials,Heavy Electrical Equipment,datasets_sp500_wikipedia_mirror
+GOOG,GOOG,Alphabet Inc. (Class C),Communication Services,Interactive Media & Services,datasets_sp500_wikipedia_mirror
+GOOGL,GOOGL,Alphabet Inc. (Class A),Communication Services,Interactive Media & Services,datasets_sp500_wikipedia_mirror
+GPC,GPC,Genuine Parts Company,Consumer Discretionary,Distributors,datasets_sp500_wikipedia_mirror
+GPN,GPN,Global Payments,Financials,Transaction & Payment Processing Services,datasets_sp500_wikipedia_mirror
+GRMN,GRMN,Garmin,Consumer Discretionary,Consumer Electronics,datasets_sp500_wikipedia_mirror
+GS,GS,Goldman Sachs,Financials,Investment Banking & Brokerage,datasets_sp500_wikipedia_mirror
+GWW,GWW,W. W. Grainger,Industrials,Industrial Machinery & Supplies & Components,datasets_sp500_wikipedia_mirror
+HAL,HAL,Halliburton,Energy,Oil & Gas Equipment & Services,datasets_sp500_wikipedia_mirror
+HAS,HAS,Hasbro,Consumer Discretionary,Leisure Products,datasets_sp500_wikipedia_mirror
+HBAN,HBAN,Huntington Bancshares,Financials,Regional Banks,datasets_sp500_wikipedia_mirror
+HCA,HCA,HCA Healthcare,Health Care,Health Care Facilities,datasets_sp500_wikipedia_mirror
+HD,HD,Home Depot (The),Consumer Discretionary,Home Improvement Retail,datasets_sp500_wikipedia_mirror
+HIG,HIG,Hartford (The),Financials,Property & Casualty Insurance,datasets_sp500_wikipedia_mirror
+HII,HII,Huntington Ingalls Industries,Industrials,Aerospace & Defense,datasets_sp500_wikipedia_mirror
+HLT,HLT,Hilton Worldwide,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",datasets_sp500_wikipedia_mirror
+HON,HON,Honeywell Technologies,Industrials,Industrial Conglomerates,datasets_sp500_wikipedia_mirror
+HONA,HONA,Honeywell Aerospace,Industrials,Aerospace & Defense,datasets_sp500_wikipedia_mirror
+HOOD,HOOD,Robinhood Markets,Financials,Investment Banking & Brokerage,datasets_sp500_wikipedia_mirror
+HPE,HPE,Hewlett Packard Enterprise,Information Technology,"Technology Hardware, Storage & Peripherals",datasets_sp500_wikipedia_mirror
+HPQ,HPQ,HP Inc.,Information Technology,"Technology Hardware, Storage & Peripherals",datasets_sp500_wikipedia_mirror
+HRL,HRL,Hormel Foods,Consumer Staples,Packaged Foods & Meats,datasets_sp500_wikipedia_mirror
+HSIC,HSIC,Henry Schein,Health Care,Health Care Distributors,datasets_sp500_wikipedia_mirror
+HST,HST,Host Hotels & Resorts,Real Estate,Hotel & Resort REITs,datasets_sp500_wikipedia_mirror
+HSY,HSY,Hershey Company (The),Consumer Staples,Packaged Foods & Meats,datasets_sp500_wikipedia_mirror
+HUBB,HUBB,Hubbell Incorporated,Industrials,Industrial Machinery & Supplies & Components,datasets_sp500_wikipedia_mirror
+HUM,HUM,Humana,Health Care,Managed Health Care,datasets_sp500_wikipedia_mirror
+HWM,HWM,Howmet Aerospace,Industrials,Aerospace & Defense,datasets_sp500_wikipedia_mirror
+IBKR,IBKR,Interactive Brokers,Financials,Investment Banking & Brokerage,datasets_sp500_wikipedia_mirror
+IBM,IBM,IBM,Information Technology,IT Consulting & Other Services,datasets_sp500_wikipedia_mirror
+ICE,ICE,Intercontinental Exchange,Financials,Financial Exchanges & Data,datasets_sp500_wikipedia_mirror
+IDXX,IDXX,Idexx Laboratories,Health Care,Health Care Equipment,datasets_sp500_wikipedia_mirror
+IEX,IEX,IDEX Corporation,Industrials,Industrial Machinery & Supplies & Components,datasets_sp500_wikipedia_mirror
+IFF,IFF,International Flavors & Fragrances,Materials,Specialty Chemicals,datasets_sp500_wikipedia_mirror
+ILMN,ILMN,"Illumina, Inc.",Health Care,Life Sciences Tools & Services,datasets_sp500_wikipedia_mirror
+INCY,INCY,Incyte,Health Care,Biotechnology,datasets_sp500_wikipedia_mirror
+INTC,INTC,Intel,Information Technology,Semiconductors,datasets_sp500_wikipedia_mirror
+INTU,INTU,Intuit,Information Technology,Application Software,datasets_sp500_wikipedia_mirror
+INVH,INVH,Invitation Homes,Real Estate,Single-Family Residential REITs,datasets_sp500_wikipedia_mirror
+IP,IP,International Paper,Materials,Paper & Plastic Packaging Products & Materials,datasets_sp500_wikipedia_mirror
+IQV,IQV,IQVIA,Health Care,Life Sciences Tools & Services,datasets_sp500_wikipedia_mirror
+IR,IR,Ingersoll Rand,Industrials,Industrial Machinery & Supplies & Components,datasets_sp500_wikipedia_mirror
+IRM,IRM,Iron Mountain,Real Estate,Other Specialized REITs,datasets_sp500_wikipedia_mirror
+ISRG,ISRG,Intuitive Surgical,Health Care,Health Care Equipment,datasets_sp500_wikipedia_mirror
+IT,IT,Gartner,Information Technology,IT Consulting & Other Services,datasets_sp500_wikipedia_mirror
+ITW,ITW,Illinois Tool Works,Industrials,Industrial Machinery & Supplies & Components,datasets_sp500_wikipedia_mirror
+IVZ,IVZ,Invesco,Financials,Asset Management & Custody Banks,datasets_sp500_wikipedia_mirror
+J,J,Jacobs Solutions,Industrials,Construction & Engineering,datasets_sp500_wikipedia_mirror
+JBHT,JBHT,J.B. Hunt,Industrials,Cargo Ground Transportation,datasets_sp500_wikipedia_mirror
+JBL,JBL,Jabil,Information Technology,Electronic Manufacturing Services,datasets_sp500_wikipedia_mirror
+JCI,JCI,Johnson Controls,Industrials,Building Products,datasets_sp500_wikipedia_mirror
+JKHY,JKHY,Jack Henry & Associates,Financials,Transaction & Payment Processing Services,datasets_sp500_wikipedia_mirror
+JNJ,JNJ,Johnson & Johnson,Health Care,Pharmaceuticals,datasets_sp500_wikipedia_mirror
+JPM,JPM,JPMorgan Chase,Financials,Diversified Banks,datasets_sp500_wikipedia_mirror
+KDP,KDP,Keurig Dr Pepper,Consumer Staples,Soft Drinks & Non-alcoholic Beverages,datasets_sp500_wikipedia_mirror
+KEY,KEY,KeyCorp,Financials,Regional Banks,datasets_sp500_wikipedia_mirror
+KEYS,KEYS,Keysight Technologies,Information Technology,Electronic Equipment & Instruments,datasets_sp500_wikipedia_mirror
+KHC,KHC,Kraft Heinz,Consumer Staples,Packaged Foods & Meats,datasets_sp500_wikipedia_mirror
+KIM,KIM,Kimco Realty,Real Estate,Retail REITs,datasets_sp500_wikipedia_mirror
+KKR,KKR,KKR & Co.,Financials,Asset Management & Custody Banks,datasets_sp500_wikipedia_mirror
+KLAC,KLAC,KLA Corporation,Information Technology,Semiconductor Materials & Equipment,datasets_sp500_wikipedia_mirror
+KMB,KMB,Kimberly-Clark,Consumer Staples,Household Products,datasets_sp500_wikipedia_mirror
+KMI,KMI,Kinder Morgan,Energy,Oil & Gas Storage & Transportation,datasets_sp500_wikipedia_mirror
+KO,KO,Coca-Cola Company (The),Consumer Staples,Soft Drinks & Non-alcoholic Beverages,datasets_sp500_wikipedia_mirror
+KR,KR,Kroger,Consumer Staples,Food Retail,datasets_sp500_wikipedia_mirror
+KVUE,KVUE,Kenvue,Consumer Staples,Personal Care Products,datasets_sp500_wikipedia_mirror
+L,L,Loews Corporation,Financials,Multi-line Insurance,datasets_sp500_wikipedia_mirror
+LDOS,LDOS,Leidos,Industrials,Diversified Support Services,datasets_sp500_wikipedia_mirror
+LEN,LEN,Lennar,Consumer Discretionary,Homebuilding,datasets_sp500_wikipedia_mirror
+LH,LH,Labcorp,Health Care,Health Care Services,datasets_sp500_wikipedia_mirror
+LHX,LHX,L3Harris,Industrials,Aerospace & Defense,datasets_sp500_wikipedia_mirror
+LII,LII,Lennox International,Industrials,Building Products,datasets_sp500_wikipedia_mirror
+LIN,LIN,Linde plc,Materials,Industrial Gases,datasets_sp500_wikipedia_mirror
+LITE,LITE,Lumentum,Information Technology,Communications Equipment,datasets_sp500_wikipedia_mirror
+LLY,LLY,Lilly (Eli),Health Care,Pharmaceuticals,datasets_sp500_wikipedia_mirror
+LMT,LMT,Lockheed Martin,Industrials,Aerospace & Defense,datasets_sp500_wikipedia_mirror
+LNT,LNT,Alliant Energy,Utilities,Electric Utilities,datasets_sp500_wikipedia_mirror
+LOW,LOW,Lowe's,Consumer Discretionary,Home Improvement Retail,datasets_sp500_wikipedia_mirror
+LRCX,LRCX,Lam Research,Information Technology,Semiconductor Materials & Equipment,datasets_sp500_wikipedia_mirror
+LULU,LULU,Lululemon Athletica,Consumer Discretionary,"Apparel, Accessories & Luxury Goods",datasets_sp500_wikipedia_mirror
+LUV,LUV,Southwest Airlines,Industrials,Passenger Airlines,datasets_sp500_wikipedia_mirror
+LVS,LVS,Las Vegas Sands,Consumer Discretionary,Casinos & Gaming,datasets_sp500_wikipedia_mirror
+LYB,LYB,LyondellBasell,Materials,Specialty Chemicals,datasets_sp500_wikipedia_mirror
+LYV,LYV,Live Nation Entertainment,Communication Services,Movies & Entertainment,datasets_sp500_wikipedia_mirror
+MA,MA,Mastercard,Financials,Transaction & Payment Processing Services,datasets_sp500_wikipedia_mirror
+MAA,MAA,Mid-America Apartment Communities,Real Estate,Multi-Family Residential REITs,datasets_sp500_wikipedia_mirror
+MAR,MAR,Marriott International,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",datasets_sp500_wikipedia_mirror
+MAS,MAS,Masco,Industrials,Building Products,datasets_sp500_wikipedia_mirror
+MCD,MCD,McDonald's,Consumer Discretionary,Restaurants,datasets_sp500_wikipedia_mirror
+MCHP,MCHP,Microchip Technology,Information Technology,Semiconductors,datasets_sp500_wikipedia_mirror
+MCK,MCK,McKesson Corporation,Health Care,Health Care Distributors,datasets_sp500_wikipedia_mirror
+MCO,MCO,Moody's Corporation,Financials,Financial Exchanges & Data,datasets_sp500_wikipedia_mirror
+MDLZ,MDLZ,Mondelez International,Consumer Staples,Packaged Foods & Meats,datasets_sp500_wikipedia_mirror
+MDT,MDT,Medtronic,Health Care,Health Care Equipment,datasets_sp500_wikipedia_mirror
+MET,MET,MetLife,Financials,Life & Health Insurance,datasets_sp500_wikipedia_mirror
+META,META,Meta Platforms,Communication Services,Interactive Media & Services,datasets_sp500_wikipedia_mirror
+MGM,MGM,MGM Resorts,Consumer Discretionary,Casinos & Gaming,datasets_sp500_wikipedia_mirror
+MKC,MKC,McCormick & Company,Consumer Staples,Packaged Foods & Meats,datasets_sp500_wikipedia_mirror
+MLM,MLM,Martin Marietta Materials,Materials,Construction Materials,datasets_sp500_wikipedia_mirror
+MMM,MMM,3M,Industrials,Industrial Conglomerates,datasets_sp500_wikipedia_mirror
+MNST,MNST,Monster Beverage,Consumer Staples,Soft Drinks & Non-alcoholic Beverages,datasets_sp500_wikipedia_mirror
+MO,MO,Altria,Consumer Staples,Tobacco,datasets_sp500_wikipedia_mirror
+MOS,MOS,Mosaic Company (The),Materials,Fertilizers & Agricultural Chemicals,datasets_sp500_wikipedia_mirror
+MPC,MPC,Marathon Petroleum,Energy,Oil & Gas Refining & Marketing,datasets_sp500_wikipedia_mirror
+MPWR,MPWR,Monolithic Power Systems,Information Technology,Semiconductors,datasets_sp500_wikipedia_mirror
+MRK,MRK,Merck & Co.,Health Care,Pharmaceuticals,datasets_sp500_wikipedia_mirror
+MRNA,MRNA,Moderna,Health Care,Biotechnology,datasets_sp500_wikipedia_mirror
+MRSH,MRSH,Marsh McLennan,Financials,Insurance Brokers,datasets_sp500_wikipedia_mirror
+MRVL,MRVL,Marvell Technology,Information Technology,Semiconductors,datasets_sp500_wikipedia_mirror
+MS,MS,Morgan Stanley,Financials,Investment Banking & Brokerage,datasets_sp500_wikipedia_mirror
+MSCI,MSCI,MSCI,Financials,Financial Exchanges & Data,datasets_sp500_wikipedia_mirror
+MSFT,MSFT,Microsoft,Information Technology,Systems Software,datasets_sp500_wikipedia_mirror
+MSI,MSI,Motorola Solutions,Information Technology,Communications Equipment,datasets_sp500_wikipedia_mirror
+MTB,MTB,M&T Bank,Financials,Regional Banks,datasets_sp500_wikipedia_mirror
+MTD,MTD,Mettler Toledo,Health Care,Life Sciences Tools & Services,datasets_sp500_wikipedia_mirror
+MU,MU,Micron Technology,Information Technology,Semiconductors,datasets_sp500_wikipedia_mirror
+NCLH,NCLH,Norwegian Cruise Line Holdings,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",datasets_sp500_wikipedia_mirror
+NDAQ,NDAQ,"Nasdaq, Inc.",Financials,Financial Exchanges & Data,datasets_sp500_wikipedia_mirror
+NDSN,NDSN,Nordson Corporation,Industrials,Industrial Machinery & Supplies & Components,datasets_sp500_wikipedia_mirror
+NEE,NEE,NextEra Energy,Utilities,Multi-Utilities,datasets_sp500_wikipedia_mirror
+NEM,NEM,Newmont,Materials,Gold,datasets_sp500_wikipedia_mirror
+NFLX,NFLX,Netflix,Communication Services,Movies & Entertainment,datasets_sp500_wikipedia_mirror
+NI,NI,NiSource,Utilities,Multi-Utilities,datasets_sp500_wikipedia_mirror
+NKE,NKE,"Nike, Inc.",Consumer Discretionary,"Apparel, Accessories & Luxury Goods",datasets_sp500_wikipedia_mirror
+NOC,NOC,Northrop Grumman,Industrials,Aerospace & Defense,datasets_sp500_wikipedia_mirror
+NOW,NOW,ServiceNow,Information Technology,Systems Software,datasets_sp500_wikipedia_mirror
+NRG,NRG,NRG Energy,Utilities,Independent Power Producers & Energy Traders,datasets_sp500_wikipedia_mirror
+NSC,NSC,Norfolk Southern,Industrials,Rail Transportation,datasets_sp500_wikipedia_mirror
+NTAP,NTAP,NetApp,Information Technology,"Technology Hardware, Storage & Peripherals",datasets_sp500_wikipedia_mirror
+NTRS,NTRS,Northern Trust,Financials,Asset Management & Custody Banks,datasets_sp500_wikipedia_mirror
+NUE,NUE,Nucor,Materials,Steel,datasets_sp500_wikipedia_mirror
+NVDA,NVDA,Nvidia,Information Technology,Semiconductors,datasets_sp500_wikipedia_mirror
+NVR,NVR,"NVR, Inc.",Consumer Discretionary,Homebuilding,datasets_sp500_wikipedia_mirror
+NWS,NWS,News Corp (Class B),Communication Services,Publishing,datasets_sp500_wikipedia_mirror
+NWSA,NWSA,News Corp (Class A),Communication Services,Publishing,datasets_sp500_wikipedia_mirror
+NXPI,NXPI,NXP Semiconductors,Information Technology,Semiconductors,datasets_sp500_wikipedia_mirror
+O,O,Realty Income,Real Estate,Retail REITs,datasets_sp500_wikipedia_mirror
+ODFL,ODFL,Old Dominion,Industrials,Cargo Ground Transportation,datasets_sp500_wikipedia_mirror
+OKE,OKE,Oneok,Energy,Oil & Gas Storage & Transportation,datasets_sp500_wikipedia_mirror
+OMC,OMC,Omnicom Group,Communication Services,Advertising,datasets_sp500_wikipedia_mirror
+ON,ON,ON Semiconductor,Information Technology,Semiconductors,datasets_sp500_wikipedia_mirror
+ORCL,ORCL,Oracle Corporation,Information Technology,Application Software,datasets_sp500_wikipedia_mirror
+ORLY,ORLY,O'Reilly Automotive,Consumer Discretionary,Automotive Retail,datasets_sp500_wikipedia_mirror
+OTIS,OTIS,Otis Worldwide,Industrials,Industrial Machinery & Supplies & Components,datasets_sp500_wikipedia_mirror
+OXY,OXY,Occidental Petroleum,Energy,Oil & Gas Exploration & Production,datasets_sp500_wikipedia_mirror
+P,P,Everpure,Information Technology,"Technology Hardware, Storage & Peripherals",datasets_sp500_wikipedia_mirror
+PANW,PANW,Palo Alto Networks,Information Technology,Systems Software,datasets_sp500_wikipedia_mirror
+PAYX,PAYX,Paychex,Industrials,Human Resource & Employment Services,datasets_sp500_wikipedia_mirror
+PCAR,PCAR,Paccar,Industrials,Construction Machinery & Heavy Transportation Equipment,datasets_sp500_wikipedia_mirror
+PCG,PCG,PG&E Corporation,Utilities,Multi-Utilities,datasets_sp500_wikipedia_mirror
+PEG,PEG,Public Service Enterprise Group,Utilities,Electric Utilities,datasets_sp500_wikipedia_mirror
+PEP,PEP,PepsiCo,Consumer Staples,Soft Drinks & Non-alcoholic Beverages,datasets_sp500_wikipedia_mirror
+PFE,PFE,Pfizer,Health Care,Pharmaceuticals,datasets_sp500_wikipedia_mirror
+PFG,PFG,Principal Financial Group,Financials,Life & Health Insurance,datasets_sp500_wikipedia_mirror
+PG,PG,Procter & Gamble,Consumer Staples,Personal Care Products,datasets_sp500_wikipedia_mirror
+PGR,PGR,Progressive Corporation,Financials,Property & Casualty Insurance,datasets_sp500_wikipedia_mirror
+PH,PH,Parker Hannifin,Industrials,Industrial Machinery & Supplies & Components,datasets_sp500_wikipedia_mirror
+PHM,PHM,PulteGroup,Consumer Discretionary,Homebuilding,datasets_sp500_wikipedia_mirror
+PKG,PKG,Packaging Corporation of America,Materials,Paper & Plastic Packaging Products & Materials,datasets_sp500_wikipedia_mirror
+PLD,PLD,Prologis,Real Estate,Industrial REITs,datasets_sp500_wikipedia_mirror
+PLTR,PLTR,Palantir Technologies,Information Technology,Application Software,datasets_sp500_wikipedia_mirror
+PM,PM,Philip Morris International,Consumer Staples,Tobacco,datasets_sp500_wikipedia_mirror
+PNC,PNC,PNC Financial Services,Financials,Diversified Banks,datasets_sp500_wikipedia_mirror
+PNR,PNR,Pentair,Industrials,Industrial Machinery & Supplies & Components,datasets_sp500_wikipedia_mirror
+PNW,PNW,Pinnacle West Capital,Utilities,Multi-Utilities,datasets_sp500_wikipedia_mirror
+PODD,PODD,Insulet Corporation,Health Care,Health Care Equipment,datasets_sp500_wikipedia_mirror
+PPG,PPG,PPG Industries,Materials,Specialty Chemicals,datasets_sp500_wikipedia_mirror
+PPL,PPL,PPL Corporation,Utilities,Electric Utilities,datasets_sp500_wikipedia_mirror
+PRU,PRU,Prudential Financial,Financials,Life & Health Insurance,datasets_sp500_wikipedia_mirror
+PSA,PSA,Public Storage,Real Estate,Self-Storage REITs,datasets_sp500_wikipedia_mirror
+PSX,PSX,Phillips 66,Energy,Oil & Gas Refining & Marketing,datasets_sp500_wikipedia_mirror
+PTC,PTC,PTC Inc.,Information Technology,Application Software,datasets_sp500_wikipedia_mirror
+PWR,PWR,Quanta Services,Industrials,Construction & Engineering,datasets_sp500_wikipedia_mirror
+PYPL,PYPL,PayPal,Financials,Transaction & Payment Processing Services,datasets_sp500_wikipedia_mirror
+Q,Q,Qnity Electronics,Information Technology,Semiconductor Materials & Equipment,datasets_sp500_wikipedia_mirror
+QCOM,QCOM,Qualcomm,Information Technology,Semiconductors,datasets_sp500_wikipedia_mirror
+RCL,RCL,Royal Caribbean Group,Consumer Discretionary,"Hotels, Resorts & Cruise Lines",datasets_sp500_wikipedia_mirror
+RDDT,RDDT,Reddit,Communication Services,Interactive Media & Services,datasets_sp500_wikipedia_mirror
+REG,REG,Regency Centers,Real Estate,Retail REITs,datasets_sp500_wikipedia_mirror
+REGN,REGN,Regeneron Pharmaceuticals,Health Care,Biotechnology,datasets_sp500_wikipedia_mirror
+RF,RF,Regions Financial Corporation,Financials,Regional Banks,datasets_sp500_wikipedia_mirror
+RJF,RJF,Raymond James Financial,Financials,Investment Banking & Brokerage,datasets_sp500_wikipedia_mirror
+RL,RL,Ralph Lauren Corporation,Consumer Discretionary,"Apparel, Accessories & Luxury Goods",datasets_sp500_wikipedia_mirror
+RMD,RMD,ResMed|,Health Care,Health Care Equipment,datasets_sp500_wikipedia_mirror
+ROK,ROK,Rockwell Automation,Industrials,Electrical Components & Equipment,datasets_sp500_wikipedia_mirror
+ROL,ROL,"Rollins, Inc.",Industrials,Environmental & Facilities Services,datasets_sp500_wikipedia_mirror
+ROP,ROP,Roper Technologies,Information Technology,Electronic Equipment & Instruments,datasets_sp500_wikipedia_mirror
+ROST,ROST,Ross Stores,Consumer Discretionary,Apparel Retail,datasets_sp500_wikipedia_mirror
+RSG,RSG,Republic Services,Industrials,Environmental & Facilities Services,datasets_sp500_wikipedia_mirror
+RTX,RTX,RTX Corporation,Industrials,Aerospace & Defense,datasets_sp500_wikipedia_mirror
+RVTY,RVTY,Revvity,Health Care,Health Care Equipment,datasets_sp500_wikipedia_mirror
+SBAC,SBAC,SBA Communications,Real Estate,Telecom Tower REITs,datasets_sp500_wikipedia_mirror
+SBUX,SBUX,Starbucks,Consumer Discretionary,Restaurants,datasets_sp500_wikipedia_mirror
+SCHW,SCHW,Charles Schwab Corporation,Financials,Investment Banking & Brokerage,datasets_sp500_wikipedia_mirror
+SHW,SHW,Sherwin-Williams,Materials,Specialty Chemicals,datasets_sp500_wikipedia_mirror
+SJM,SJM,J.M. Smucker Company (The),Consumer Staples,Packaged Foods & Meats,datasets_sp500_wikipedia_mirror
+SKYD,SKYD,Skydance Corporation,Communication Services,Movies & Entertainment,official_corporate_action_overlay
+SLB,SLB,Schlumberger,Energy,Oil & Gas Equipment & Services,datasets_sp500_wikipedia_mirror
+SMCI,SMCI,Supermicro,Information Technology,"Technology Hardware, Storage & Peripherals",datasets_sp500_wikipedia_mirror
+SNA,SNA,Snap-on,Industrials,Industrial Machinery & Supplies & Components,datasets_sp500_wikipedia_mirror
+SNDK,SNDK,Sandisk,Information Technology,"Technology Hardware, Storage & Peripherals",datasets_sp500_wikipedia_mirror
+SNPS,SNPS,Synopsys,Information Technology,Application Software,datasets_sp500_wikipedia_mirror
+SO,SO,Southern Company,Utilities,Electric Utilities,datasets_sp500_wikipedia_mirror
+SOLV,SOLV,Solventum,Health Care,Health Care Technology,datasets_sp500_wikipedia_mirror
+SPG,SPG,Simon Property Group,Real Estate,Retail REITs,datasets_sp500_wikipedia_mirror
+SPGI,SPGI,S&P Global,Financials,Financial Exchanges & Data,datasets_sp500_wikipedia_mirror
+SRE,SRE,Sempra,Utilities,Multi-Utilities,datasets_sp500_wikipedia_mirror
+STE,STE,Steris,Health Care,Health Care Equipment,datasets_sp500_wikipedia_mirror
+STLD,STLD,Steel Dynamics,Materials,Steel,datasets_sp500_wikipedia_mirror
+STT,STT,State Street Corporation,Financials,Asset Management & Custody Banks,datasets_sp500_wikipedia_mirror
+STX,STX,Seagate Technology,Information Technology,"Technology Hardware, Storage & Peripherals",datasets_sp500_wikipedia_mirror
+STZ,STZ,Constellation Brands,Consumer Staples,Distillers & Vintners,datasets_sp500_wikipedia_mirror
+SW,SW,Smurfit Westrock,Materials,Paper & Plastic Packaging Products & Materials,datasets_sp500_wikipedia_mirror
+SWK,SWK,Stanley Black & Decker,Industrials,Industrial Machinery & Supplies & Components,datasets_sp500_wikipedia_mirror
+SWKS,SWKS,Skyworks Solutions,Information Technology,Semiconductors,datasets_sp500_wikipedia_mirror
+SYF,SYF,Synchrony Financial,Financials,Consumer Finance,datasets_sp500_wikipedia_mirror
+SYK,SYK,Stryker Corporation,Health Care,Health Care Equipment,datasets_sp500_wikipedia_mirror
+SYY,SYY,Sysco,Consumer Staples,Food Distributors,datasets_sp500_wikipedia_mirror
+T,T,AT&T,Communication Services,Integrated Telecommunication Services,datasets_sp500_wikipedia_mirror
+TDG,TDG,TransDigm Group,Industrials,Aerospace & Defense,datasets_sp500_wikipedia_mirror
+TDY,TDY,Teledyne Technologies,Information Technology,Electronic Equipment & Instruments,datasets_sp500_wikipedia_mirror
+TECH,TECH,Bio-Techne,Health Care,Life Sciences Tools & Services,datasets_sp500_wikipedia_mirror
+TEL,TEL,TE Connectivity,Information Technology,Electronic Manufacturing Services,datasets_sp500_wikipedia_mirror
+TER,TER,Teradyne,Information Technology,Semiconductor Materials & Equipment,datasets_sp500_wikipedia_mirror
+TFC,TFC,Truist Financial,Financials,Diversified Banks,datasets_sp500_wikipedia_mirror
+TGT,TGT,Target Corporation,Consumer Staples,Consumer Staples Merchandise Retail,datasets_sp500_wikipedia_mirror
+TJX,TJX,TJX Companies,Consumer Discretionary,Apparel Retail,datasets_sp500_wikipedia_mirror
+TKO,TKO,TKO Group Holdings,Communication Services,Movies & Entertainment,datasets_sp500_wikipedia_mirror
+TMO,TMO,Thermo Fisher Scientific,Health Care,Life Sciences Tools & Services,datasets_sp500_wikipedia_mirror
+TMUS,TMUS,T-Mobile US,Communication Services,Wireless Telecommunication Services,datasets_sp500_wikipedia_mirror
+TPL,TPL,Texas Pacific Land Corporation,Energy,Oil & Gas Exploration & Production,datasets_sp500_wikipedia_mirror
+TPR,TPR,"Tapestry, Inc.",Consumer Discretionary,"Apparel, Accessories & Luxury Goods",datasets_sp500_wikipedia_mirror
+TRGP,TRGP,Targa Resources,Energy,Oil & Gas Storage & Transportation,datasets_sp500_wikipedia_mirror
+TRMB,TRMB,Trimble Inc.,Information Technology,Application Software,datasets_sp500_wikipedia_mirror
+TROW,TROW,T. Rowe Price,Financials,Asset Management & Custody Banks,datasets_sp500_wikipedia_mirror
+TRV,TRV,Travelers Companies (The),Financials,Property & Casualty Insurance,datasets_sp500_wikipedia_mirror
+TSCO,TSCO,Tractor Supply,Consumer Discretionary,Other Specialty Retail,datasets_sp500_wikipedia_mirror
+TSLA,TSLA,"Tesla, Inc.",Consumer Discretionary,Automobile Manufacturers,datasets_sp500_wikipedia_mirror
+TSN,TSN,Tyson Foods,Consumer Staples,Packaged Foods & Meats,datasets_sp500_wikipedia_mirror
+TT,TT,Trane Technologies,Industrials,Building Products,datasets_sp500_wikipedia_mirror
+TTWO,TTWO,Take-Two Interactive,Communication Services,Interactive Home Entertainment,datasets_sp500_wikipedia_mirror
+TWLO,TWLO,Twilio Inc.,Information Technology,,official_spglobal_action_overlay
+TXN,TXN,Texas Instruments,Information Technology,Semiconductors,datasets_sp500_wikipedia_mirror
+TXT,TXT,Textron,Industrials,Aerospace & Defense,datasets_sp500_wikipedia_mirror
+TYL,TYL,Tyler Technologies,Information Technology,Application Software,datasets_sp500_wikipedia_mirror
+UAL,UAL,United Airlines Holdings,Industrials,Passenger Airlines,datasets_sp500_wikipedia_mirror
+UBER,UBER,Uber,Industrials,Passenger Ground Transportation,datasets_sp500_wikipedia_mirror
+UDR,UDR,"UDR, Inc.",Real Estate,Multi-Family Residential REITs,datasets_sp500_wikipedia_mirror
+UHS,UHS,Universal Health Services,Health Care,Health Care Facilities,datasets_sp500_wikipedia_mirror
+ULTA,ULTA,Ulta Beauty,Consumer Discretionary,Other Specialty Retail,datasets_sp500_wikipedia_mirror
+UNH,UNH,UnitedHealth Group,Health Care,Managed Health Care,datasets_sp500_wikipedia_mirror
+UNP,UNP,Union Pacific Corporation,Industrials,Rail Transportation,datasets_sp500_wikipedia_mirror
+UPS,UPS,United Parcel Service,Industrials,Air Freight & Logistics,datasets_sp500_wikipedia_mirror
+URI,URI,United Rentals,Industrials,Trading Companies & Distributors,datasets_sp500_wikipedia_mirror
+USB,USB,U.S. Bancorp,Financials,Diversified Banks,datasets_sp500_wikipedia_mirror
+V,V,Visa Inc.,Financials,Transaction & Payment Processing Services,datasets_sp500_wikipedia_mirror
+VEEV,VEEV,Veeva Systems,Health Care,Health Care Technology,datasets_sp500_wikipedia_mirror
+VICI,VICI,Vici Properties,Real Estate,Hotel & Resort REITs,datasets_sp500_wikipedia_mirror
+VLO,VLO,Valero Energy,Energy,Oil & Gas Refining & Marketing,datasets_sp500_wikipedia_mirror
+VLTO,VLTO,Veralto,Industrials,Environmental & Facilities Services,datasets_sp500_wikipedia_mirror
+VMC,VMC,Vulcan Materials Company,Materials,Construction Materials,datasets_sp500_wikipedia_mirror
+VMRK,VMRK,Vivmark Residential,Real Estate,Multi-Family Residential REITs,datasets_sp500_wikipedia_mirror
+VRSK,VRSK,Verisk Analytics,Industrials,Research & Consulting Services,datasets_sp500_wikipedia_mirror
+VRSN,VRSN,Verisign,Information Technology,Internet Services & Infrastructure,datasets_sp500_wikipedia_mirror
+VRT,VRT,Vertiv,Industrials,Electrical Components & Equipment,datasets_sp500_wikipedia_mirror
+VRTX,VRTX,Vertex Pharmaceuticals,Health Care,Biotechnology,datasets_sp500_wikipedia_mirror
+VST,VST,Vistra Corp.,Utilities,Electric Utilities,datasets_sp500_wikipedia_mirror
+VTR,VTR,Ventas,Real Estate,Health Care REITs,datasets_sp500_wikipedia_mirror
+VTRS,VTRS,Viatris,Health Care,Pharmaceuticals,datasets_sp500_wikipedia_mirror
+VYLR,VYLR,Vylor Inc.,Consumer Staples,,official_spglobal_action_overlay
+VZ,VZ,Verizon,Communication Services,Integrated Telecommunication Services,datasets_sp500_wikipedia_mirror
+WAB,WAB,Wabtec,Industrials,Construction Machinery & Heavy Transportation Equipment,datasets_sp500_wikipedia_mirror
+WAT,WAT,Waters Corporation,Health Care,Life Sciences Tools & Services,datasets_sp500_wikipedia_mirror
+WDAY,WDAY,"Workday, Inc.",Information Technology,Application Software,datasets_sp500_wikipedia_mirror
+WDC,WDC,Western Digital,Information Technology,"Technology Hardware, Storage & Peripherals",datasets_sp500_wikipedia_mirror
+WEC,WEC,WEC Energy Group,Utilities,Electric Utilities,datasets_sp500_wikipedia_mirror
+WELL,WELL,Welltower,Real Estate,Health Care REITs,datasets_sp500_wikipedia_mirror
+WFC,WFC,Wells Fargo,Financials,Diversified Banks,datasets_sp500_wikipedia_mirror
+WM,WM,Waste Management,Industrials,Environmental & Facilities Services,datasets_sp500_wikipedia_mirror
+WMB,WMB,Williams Companies,Energy,Oil & Gas Storage & Transportation,datasets_sp500_wikipedia_mirror
+WMT,WMT,Walmart,Consumer Staples,Consumer Staples Merchandise Retail,datasets_sp500_wikipedia_mirror
+WRB,WRB,W. R. Berkley Corporation,Financials,Property & Casualty Insurance,datasets_sp500_wikipedia_mirror
+WSM,WSM,"Williams-Sonoma, Inc.",Consumer Discretionary,Homefurnishing Retail,datasets_sp500_wikipedia_mirror
+WST,WST,West Pharmaceutical Services,Health Care,Health Care Supplies,datasets_sp500_wikipedia_mirror
+WTW,WTW,Willis Towers Watson,Financials,Insurance Brokers,datasets_sp500_wikipedia_mirror
+WY,WY,Weyerhaeuser,Real Estate,Timber REITs,datasets_sp500_wikipedia_mirror
+WYNN,WYNN,Wynn Resorts,Consumer Discretionary,Casinos & Gaming,datasets_sp500_wikipedia_mirror
+XEL,XEL,Xcel Energy,Utilities,Multi-Utilities,datasets_sp500_wikipedia_mirror
+XOM,XOM,ExxonMobil,Energy,Integrated Oil & Gas,datasets_sp500_wikipedia_mirror
+XYL,XYL,Xylem Inc.,Industrials,Industrial Machinery & Supplies & Components,datasets_sp500_wikipedia_mirror
+XYZ,XYZ,"Block, Inc.",Financials,Transaction & Payment Processing Services,datasets_sp500_wikipedia_mirror
+YUM,YUM,Yum! Brands,Consumer Discretionary,Restaurants,datasets_sp500_wikipedia_mirror
+ZBH,ZBH,Zimmer Biomet,Health Care,Health Care Equipment,datasets_sp500_wikipedia_mirror
+ZBRA,ZBRA,Zebra Technologies,Information Technology,Electronic Equipment & Instruments,datasets_sp500_wikipedia_mirror
+ZTS,ZTS,Zoetis,Health Care,Pharmaceuticals,datasets_sp500_wikipedia_mirror

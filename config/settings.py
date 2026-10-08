@@ -1,0 +1,15 @@
+from pathlib import Path
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+DATA_DIR = PROJECT_ROOT / "data"
+UNIVERSE_DIR = DATA_DIR / "universe"
+RAW_DATA_DIR = DATA_DIR / "raw"
+PROCESSED_DATA_DIR = DATA_DIR / "processed"
+REPORTS_DIR = PROJECT_ROOT / "reports"
+
+DEFAULT_UNIVERSE_NAME = "sp500"
+DEFAULT_LOOKBACK_PERIOD = "2y"
+DEFAULT_INTERVAL = "1d"
+MIN_HISTORY_ROWS = 252
+
+EXECUTION_ENABLED = False

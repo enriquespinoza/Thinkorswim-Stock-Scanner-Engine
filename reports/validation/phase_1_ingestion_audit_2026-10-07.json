@@ -1,0 +1,32 @@
+{
+  "phase": "1",
+  "status": "complete",
+  "audit_date": "2026-10-07",
+  "universe_snapshot": "data/universe/sp500_2026-10-07.csv",
+  "expected_symbols": 503,
+  "manifest_symbols": 503,
+  "universe_coverage_pct": 100.0,
+  "successful_downloads": 503,
+  "failed_downloads": 0,
+  "eligible_symbols": 499,
+  "ineligible_symbols": 4,
+  "successful_rows_with_sha256": 503,
+  "unique_manifest_hashes": 1,
+  "manifest_sha256": "fb9b1a672cad283c1e0036a783c80c67fa7079d2b7021c4960d60086e0447d5c",
+  "history_rows": {
+    "minimum": 5,
+    "median": 501,
+    "maximum": 501
+  },
+  "ineligible": [
+    {"symbol": "FDXF", "rows": 93, "reason": "insufficient_history"},
+    {"symbol": "HONA", "rows": 80, "reason": "insufficient_history"},
+    {"symbol": "Q", "rows": 238, "reason": "insufficient_history"},
+    {"symbol": "VYLR", "rows": 5, "reason": "insufficient_history"}
+  ],
+  "notes": [
+    "No market-data provider failures remained after correcting the point-in-time universe snapshot.",
+    "WBD was removed because it was no longer an S&P 500 constituent as of the 2026-10-07 snapshot.",
+    "The Phase-1 eligibility policy is infrastructure-only and is not a frozen investment rule."
+  ]
+}
