@@ -225,3 +225,8 @@ tokens/
 data/raw/*.csv
 data/processed/*.csv
 reports/scans/*.csv
+
+# Generated scanner artifacts in nested research directories
+data/raw/**/*.csv
+data/processed/**/*.csv
+reports/scans/**/*.csv
