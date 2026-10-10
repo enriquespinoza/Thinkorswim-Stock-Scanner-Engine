@@ -1,6 +1,10 @@
 from __future__ import annotations
 
+from typing import Any
+
 import pandas as pd
+
+from src.data.schema import normalize_daily_bars
 
 # Research-only session quarantine. Dates belong here only after a preserved raw
 # payload audit demonstrates a systematic provider anomaly across unrelated assets.
@@ -42,3 +46,31 @@ def quarantine_known_bad_sessions(frame: pd.DataFrame) -> tuple[pd.DataFrame, pd
         ~x["timestamp"].dt.date.isin(QUARANTINED_SESSION_DATES)
     ].reset_index(drop=True)
     return cleaned, invalid
+
+
+
+def normalize_research_price_history(
+    payload: dict[str, Any],
+    symbol: str,
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+    if bool(payload.get("empty", False)):
+        raise ValueError(f"Schwab returned an empty price history for {symbol}.")
+
+    candles = payload.get("candles")
+    if not isinstance(candles, list) or not candles:
+        raise ValueError(f"Schwab payload contains no candles for {symbol}.")
+
+    frame = pd.DataFrame(candles)
+    required = {"datetime", "open", "high", "low", "close", "volume"}
+    missing = required.difference(frame.columns)
+    if missing:
+        raise ValueError(
+            f"Schwab candles for {symbol} are missing fields: {sorted(missing)}"
+        )
+
+    frame = frame.rename(columns={"datetime": "timestamp"})
+    frame["timestamp"] = pd.to_datetime(frame["timestamp"], unit="ms", utc=True)
+
+    cleaned, quarantined = quarantine_known_bad_sessions(frame)
+    normalized = normalize_daily_bars(cleaned, symbol)
+    return normalized, quarantined
