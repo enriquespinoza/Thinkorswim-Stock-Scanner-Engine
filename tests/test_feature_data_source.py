@@ -24,3 +24,14 @@ def test_unknown_feature_source_is_rejected() -> None:
         assert "Unsupported feature data source" in str(exc)
     else:
         raise AssertionError("unknown provider should have raised")
+
+
+def test_schwab_research_source_isolated_from_production() -> None:
+    production = get_feature_data_source("schwab")
+    research = get_feature_data_source("schwab-research")
+
+    assert research.name == "schwab-research"
+    assert research.bars_dir != production.bars_dir
+    assert research.reference_dir != production.reference_dir
+    assert research.feature_dir != production.feature_dir
+    assert research.manifest_path != production.manifest_path
