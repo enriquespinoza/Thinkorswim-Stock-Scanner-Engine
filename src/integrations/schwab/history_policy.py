@@ -1,7 +1,9 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from datetime import datetime
+
+import pandas as pd
 
 from src.integrations.schwab.provider import SchwabDailyBarProvider, SchwabHistoryResult
 
@@ -22,6 +24,34 @@ class SchwabHistoryResolution:
         return None if self.fallback is None else len(self.fallback.bars)
 
 
+def _trim_to_requested_window(
+    result: SchwabHistoryResult,
+    *,
+    start_datetime: datetime,
+    end_datetime: datetime,
+) -> SchwabHistoryResult:
+    bars = result.bars.copy()
+    timestamps = pd.to_datetime(bars["timestamp"], utc=True)
+
+    start = pd.Timestamp(start_datetime)
+    end = pd.Timestamp(end_datetime)
+    if start.tzinfo is None:
+        start = start.tz_localize("UTC")
+    else:
+        start = start.tz_convert("UTC")
+    if end.tzinfo is None:
+        end = end.tz_localize("UTC")
+    else:
+        end = end.tz_convert("UTC")
+
+    trimmed = bars.loc[(timestamps >= start) & (timestamps <= end)].reset_index(drop=True)
+
+    return replace(
+        result,
+        bars=trimmed,
+    )
+
+
 def resolve_daily_history(
     provider: SchwabDailyBarProvider,
     *,
@@ -31,10 +61,11 @@ def resolve_daily_history(
     end_datetime: datetime,
     minimum_rows: int,
 ) -> SchwabHistoryResolution:
-    """Prefer the bounded request, but verify suspiciously short histories.
+    """Prefer bounded history, with one unbounded recovery request when needed.
 
-    If the bounded result has fewer than minimum_rows observations, make one
-    unbounded request and select whichever response contains more history.
+    The unbounded response is only a recovery mechanism. If selected, its bars
+    are trimmed back to the originally requested window so all symbols retain a
+    consistent research horizon.
     """
     initial = provider.fetch(
         provider_symbol,
@@ -51,16 +82,21 @@ def resolve_daily_history(
             request_mode="bounded",
         )
 
-    fallback = provider.fetch(
+    fallback_full = provider.fetch(
         provider_symbol,
         canonical_symbol,
         start_datetime=None,
         end_datetime=None,
     )
+    fallback = _trim_to_requested_window(
+        fallback_full,
+        start_datetime=start_datetime,
+        end_datetime=end_datetime,
+    )
 
     if len(fallback.bars) > len(initial.bars):
         selected = fallback
-        mode = "unbounded_fallback"
+        mode = "unbounded_fallback_trimmed"
     else:
         selected = initial
         mode = "bounded_shorter_or_equal_fallback"
