@@ -19,8 +19,8 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--provider",
-        choices=("yahoo", "schwab"),
-        default=PRIMARY_RESEARCH_PROVIDER,
+        choices=("yahoo", "schwab", "schwab-research"),
+        default="schwab-research",
     )
     parser.add_argument("--feature-manifest", type=Path, default=None)
     parser.add_argument(
