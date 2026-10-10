@@ -104,3 +104,30 @@ Schwab becomes the default research provider only after:
 - a versioned migration audit is committed.
 
 Until then, Yahoo remains the frozen baseline and Schwab remains a candidate provider.
+
+
+## Schwab V2 feature parity result
+
+The Schwab-normalized Phase-2 feature build completed successfully.
+
+```text
+Provider: schwab
+Built feature files: 498
+Feature manifest SHA-256:
+840d2365bd1239932ad94f574fa63a12edd8718145473bdb608f04867f39d765
+
+Symbols audited: 498
+Features per symbol: 37
+Comparisons: 18426
+Tolerance: 1.0e-09
+Maximum absolute difference: 1.907348632812e-06
+Failures: 0
+
+FEATURE PARITY AUDIT PASSED
+```
+
+The production Schwab feature output therefore reproduces the independent reference calculations within the configured relative-scale tolerance.
+
+### Remaining cutover gate
+
+Schwab is **not yet declared the default research provider**. The Yahoo-vs-Schwab cross-provider market-data audit remains required by the Phase-2B cutover policy. The purpose of that audit is to identify and explain any material differences in overlapping OHLCV observations before the provider role changes.
