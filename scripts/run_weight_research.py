@@ -4,7 +4,12 @@ import argparse
 from pathlib import Path
 
 from config.weight_research import (
+    MIN_TRAINING_DATES,
+    PRIMARY_FORWARD_RETURN_HORIZON,
     RESEARCH_CONTRACT_VERSION,
+    TEST_WINDOW_DATES,
+    TURNOVER_PENALTY,
+    WEIGHT_STEP,
     SURVIVORSHIP_BIAS_WARNING,
 )
 from src.scoring.historical import build_historical_scoring_panel
@@ -54,6 +59,11 @@ def main() -> None:
     print("=" * 88)
     print(f"Contract: {RESEARCH_CONTRACT_VERSION}")
     print(f"Provider: {args.provider}")
+    print(f"Primary forward horizon: {PRIMARY_FORWARD_RETURN_HORIZON} trading days")
+    print(f"Minimum training dates: {MIN_TRAINING_DATES}")
+    print(f"Test window dates: {TEST_WINDOW_DATES}")
+    print(f"Weight step: {WEIGHT_STEP:.2f}")
+    print(f"Turnover penalty: {TURNOVER_PENALTY:.4f}")
     print(f"Historical panel rows: {len(panel)}")
     print(f"Historical scoring dates: {panel['session_date'].nunique()}")
     print(f"Walk-forward folds: {len(folds)}")
