@@ -69,3 +69,34 @@ def test_candidate_evaluation_rewards_predictive_score() -> None:
     assert result["mean_rank_ic"] > 0.99
     assert result["mean_top_bottom_spread"] > 0.0
     assert result["positive_spread_rate"] == 1.0
+
+
+def test_rank_ic_handles_ties_without_scipy() -> None:
+    rows = []
+    date = pd.Timestamp("2026-01-02", tz="UTC")
+    for idx in range(100):
+        signal = float(idx // 10)
+        rows.append(
+            {
+                "session_date": date,
+                "symbol": f"S{idx:03d}",
+                "group_momentum": signal,
+                "group_trend": 0.0,
+                "group_relative_strength": 0.0,
+                "group_risk": 0.0,
+                "group_participation": 0.0,
+                "forward_return_20d": signal / 100.0,
+            }
+        )
+
+    frame = pd.DataFrame(rows)
+    weights = {group: 0.0 for group in GROUPS}
+    weights["momentum"] = 1.0
+
+    result = evaluate_candidate(
+        frame,
+        weights,
+        forward_column="forward_return_20d",
+    )
+
+    assert result["mean_rank_ic"] > 0.99
