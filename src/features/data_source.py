@@ -8,6 +8,10 @@ from config.data_sources import (
     SCHWAB_MANIFEST_DIR,
     SCHWAB_NORMALIZED_DIR,
     SCHWAB_REFERENCE_NORMALIZED_DIR,
+    SCHWAB_RESEARCH_FEATURE_DIR,
+    SCHWAB_RESEARCH_MANIFEST_DIR,
+    SCHWAB_RESEARCH_NORMALIZED_DIR,
+    SCHWAB_RESEARCH_REFERENCE_NORMALIZED_DIR,
 )
 from config.settings import PROCESSED_DATA_DIR, RAW_DATA_DIR
 
@@ -40,6 +44,15 @@ def get_feature_data_source(name: str) -> FeatureDataSource:
             reference_dir=SCHWAB_REFERENCE_NORMALIZED_DIR,
             feature_dir=SCHWAB_FEATURE_DIR,
             manifest_path=SCHWAB_MANIFEST_DIR / "download_manifest.csv",
+        )
+
+    if normalized == "schwab-research":
+        return FeatureDataSource(
+            name="schwab-research",
+            bars_dir=SCHWAB_RESEARCH_NORMALIZED_DIR,
+            reference_dir=SCHWAB_RESEARCH_REFERENCE_NORMALIZED_DIR,
+            feature_dir=SCHWAB_RESEARCH_FEATURE_DIR,
+            manifest_path=SCHWAB_RESEARCH_MANIFEST_DIR / "download_manifest.csv",
         )
 
     raise ValueError(f"Unsupported feature data source: {name}")
