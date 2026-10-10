@@ -1,0 +1,36 @@
+{
+  "phase": "2B",
+  "status": "complete",
+  "audit_date": "2026-10-09",
+  "primary_research_provider": "schwab",
+  "provider_version": "market-data-v1",
+  "ingestion": {
+    "symbols_expected": 503,
+    "symbols_successful": 503,
+    "symbols_failed": 0,
+    "eligible_symbols": 498,
+    "ineligible_symbols": ["FDXF", "HONA", "Q", "SKYD", "VYLR"],
+    "market_data_manifest_sha256": "25403e45b6277127ec153ec680438373504fd7db31d476a13b6ca4686ec21d65"
+  },
+  "feature_parity": {
+    "symbols_audited": 498,
+    "features_per_symbol": 37,
+    "comparisons": 18426,
+    "tolerance_relative_scale": 1e-9,
+    "maximum_absolute_difference": 1.907348632812e-06,
+    "failures": 0,
+    "feature_manifest_sha256": "840d2365bd1239932ad94f574fa63a12edd8718145473bdb608f04867f39d765"
+  },
+  "cross_provider_audit": {
+    "symbols": 503,
+    "clean": 414,
+    "isolated_vendor_difference": 80,
+    "localized_adjustment_window": 6,
+    "persistent_adjustment_basis": 3,
+    "persistent_adjustment_basis_symbols": ["HON", "PCAR", "SPGI"],
+    "missing_or_no_overlap": 0,
+    "median_symbol_max_close_diff_bps": 2.2313,
+    "worst_close_diff_bps": 730.6677
+  },
+  "decision": "Promote Schwab V2 to primary scanner research source; retain Yahoo V1 as frozen control baseline."
+}
