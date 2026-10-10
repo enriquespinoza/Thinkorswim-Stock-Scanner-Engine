@@ -7,7 +7,7 @@ from config.alpha import ALPHA_FREEZE_DATE, ALPHA_SPEC_VERSION, HOLDOUT_POLICY
 from config.data_sources import PRIMARY_RESEARCH_PROVIDER
 from src.scoring.alpha import score_alpha_snapshot
 from src.scoring.snapshot import build_latest_feature_snapshot
-from src.validation.holdout import write_immutable_holdout_snapshot
+from src.validation.holdout import HoldoutNotReadyError, write_immutable_holdout_snapshot
 
 
 def parse_args() -> argparse.Namespace:
@@ -37,11 +37,24 @@ def main() -> None:
     )
     scored = score_alpha_snapshot(latest)
 
-    snapshot_path, manifest_path, digest = write_immutable_holdout_snapshot(
-        scored,
-        provider=args.provider,
-        output_root=args.output_root,
-    )
+    try:
+        snapshot_path, manifest_path, digest = write_immutable_holdout_snapshot(
+            scored,
+            provider=args.provider,
+            output_root=args.output_root,
+        )
+    except HoldoutNotReadyError as exc:
+        latest_session = scored["timestamp"].min()
+        print("=" * 88)
+        print("SCANNER ALPHA V1 — HOLDOUT NOT READY")
+        print("=" * 88)
+        print(f"Alpha spec: {ALPHA_SPEC_VERSION}")
+        print(f"Freeze date: {ALPHA_FREEZE_DATE}")
+        print(f"Provider: {args.provider}")
+        print(f"Latest feature session: {latest_session}")
+        print(f"Status: {exc}")
+        print("No holdout artifact was written.")
+        return
 
     print("=" * 88)
     print("SCANNER ALPHA V1 — TRUE HOLDOUT SNAPSHOT")
