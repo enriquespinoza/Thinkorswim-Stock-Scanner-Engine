@@ -241,3 +241,7 @@ data/processed/scoring/*.csv
 
 # Phase 3B generated research artifacts
 reports/research/phase_3b/*.csv
+
+# Phase 3B deep research market-data artifacts
+data/research/**
+data/processed/research/**
