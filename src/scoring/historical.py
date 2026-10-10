@@ -54,7 +54,7 @@ def build_historical_scoring_panel(
     history["session_date"] = history["timestamp"].dt.normalize()
 
     # Pick the last available market session in each requested calendar bucket.
-    bucket = history["session_date"].dt.to_period(rebalance_frequency)
+    bucket = history["session_date"].dt.tz_localize(None).dt.to_period(rebalance_frequency)
     history["rebalance_bucket"] = bucket.astype(str)
 
     sampled = (
