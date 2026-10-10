@@ -47,6 +47,27 @@ def _session_frame(frame: pd.DataFrame, provider: str) -> pd.DataFrame:
     return out.rename(columns=rename)
 
 
+def _classify_difference(
+    *,
+    rows_over_tolerance: int,
+    pct_rows_over_tolerance: float,
+    median_close_diff_bps: float,
+    median_close_ratio: float,
+) -> str:
+    ratio_deviation = abs(median_close_ratio - 1.0)
+
+    if rows_over_tolerance == 0:
+        return "clean"
+
+    if median_close_diff_bps > 5.0 or ratio_deviation > 0.005:
+        return "persistent_adjustment_basis"
+
+    if pct_rows_over_tolerance <= 0.01:
+        return "isolated_vendor_difference"
+
+    return "localized_adjustment_window"
+
+
 def compare_symbol(
     yahoo: pd.DataFrame,
     schwab: pd.DataFrame,
@@ -83,6 +104,7 @@ def compare_symbol(
             "worst_schwab_close": np.nan,
             "median_schwab_to_yahoo_close_ratio": np.nan,
             "volume_match_rate": np.nan,
+            "classification": "no_overlap",
             "status": "no_overlap",
         }
 
@@ -118,11 +140,13 @@ def compare_symbol(
         / merged["close_yahoo"].astype(float)
     )
 
-    status = (
-        "ok"
-        if rows_over_tolerance == 0
-        else "review"
+    classification = _classify_difference(
+        rows_over_tolerance=rows_over_tolerance,
+        pct_rows_over_tolerance=float(pct_rows_over_tolerance),
+        median_close_diff_bps=float(close_diff_bps.median()),
+        median_close_ratio=float(close_ratio.median()),
     )
+    status = "ok" if classification == "clean" else "review"
 
     return {
         "symbol": symbol,
@@ -141,6 +165,7 @@ def compare_symbol(
         "worst_schwab_close": float(merged.loc[worst_index, "close_schwab"]),
         "median_schwab_to_yahoo_close_ratio": float(close_ratio.median()),
         "volume_match_rate": float(volume_match.mean()),
+        "classification": classification,
         "status": status,
     }
 
@@ -174,6 +199,7 @@ def main() -> None:
                     "worst_schwab_close": np.nan,
                     "median_schwab_to_yahoo_close_ratio": np.nan,
                     "volume_match_rate": np.nan,
+                    "classification": "missing_source",
                     "status": "missing_source",
                 }
             )
@@ -227,6 +253,9 @@ def main() -> None:
             "Median share of rows > tolerance: "
             f"{comparable['pct_rows_over_tolerance'].median():.2%}"
         )
+        print()
+        print("Classification counts:")
+        print(report["classification"].value_counts().to_string())
 
     review = report.loc[report["status"] != "ok"]
     if not review.empty:
