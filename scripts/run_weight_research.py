@@ -37,7 +37,7 @@ def main() -> None:
         provider=args.provider,
         feature_manifest_path=args.feature_manifest,
     )
-    folds, candidates = walk_forward_weight_research(panel)
+    folds, candidates = walk_forward_weight_research(panel, progress=True)
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
