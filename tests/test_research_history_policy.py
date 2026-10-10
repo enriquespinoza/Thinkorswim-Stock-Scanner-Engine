@@ -60,3 +60,21 @@ def test_unknown_invalid_session_still_fails() -> None:
 
     with pytest.raises(ValueError, match="outside the approved quarantine"):
         normalize_research_price_history(payload, "TEST")
+
+
+def test_repeated_anomaly_dates_are_quarantined() -> None:
+    for date_text in ("2020-10-21 05:00:00", "2023-01-24 05:00:00"):
+        timestamp = pd.Timestamp(date_text, tz="UTC")
+        payload = _payload(
+            int(timestamp.timestamp() * 1000),
+            open_=100.0,
+            high=99.0,
+            low=98.0,
+            close=98.5,
+        )
+
+        bars, quarantined = normalize_research_price_history(payload, "TEST")
+
+        assert len(bars) == 1
+        assert len(quarantined) == 1
+        assert quarantined.iloc[0]["timestamp"].date() == timestamp.date()
