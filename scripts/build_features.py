@@ -5,6 +5,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from config.data_sources import PRIMARY_RESEARCH_PROVIDER
+
 from config.features import REFERENCE_SYMBOLS, SECTOR_BENCHMARKS
 from src.features.data_source import get_feature_data_source
 from src.features.io import load_daily_bars, save_feature_frame
@@ -17,7 +19,11 @@ def parse_args() -> argparse.Namespace:
         description="Build Phase-2 feature files from a selected market-data provider."
     )
     parser.add_argument("universe_csv", type=Path)
-    parser.add_argument("--provider", choices=("yahoo", "schwab"), default="yahoo")
+    parser.add_argument(
+        "--provider",
+        choices=("yahoo", "schwab"),
+        default=PRIMARY_RESEARCH_PROVIDER,
+    )
     parser.add_argument("--manifest", type=Path, default=None)
     return parser.parse_args()
 
