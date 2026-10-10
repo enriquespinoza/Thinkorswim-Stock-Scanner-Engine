@@ -62,7 +62,7 @@ def _classify_difference(
     if median_close_diff_bps > 5.0 or ratio_deviation > 0.005:
         return "persistent_adjustment_basis"
 
-    if pct_rows_over_tolerance <= 0.01:
+    if rows_over_tolerance == 1 or pct_rows_over_tolerance <= 0.01:
         return "isolated_vendor_difference"
 
     return "localized_adjustment_window"
