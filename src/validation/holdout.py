@@ -10,11 +10,15 @@ from config.alpha import ALPHA_FREEZE_DATE, ALPHA_SPEC_VERSION
 from src.utils.hashing import stable_dataframe_hash
 
 
+class HoldoutNotReadyError(ValueError):
+    """Raised when the latest available market session is not post-freeze."""
+
+
 def assert_true_holdout_session(session_date: date) -> None:
     freeze = date.fromisoformat(ALPHA_FREEZE_DATE)
     if session_date <= freeze:
-        raise ValueError(
-            f"Holdout session {session_date} is not after alpha freeze date {freeze}"
+        raise HoldoutNotReadyError(
+            f"Latest available session {session_date} is not after alpha freeze date {freeze}"
         )
 
 
