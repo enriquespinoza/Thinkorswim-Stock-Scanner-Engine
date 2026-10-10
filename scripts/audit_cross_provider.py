@@ -69,11 +69,19 @@ def compare_symbol(
         return {
             "symbol": symbol,
             "overlap_rows": 0,
+            "yahoo_latest_session": "",
+            "schwab_latest_session": "",
             "latest_date_match": False,
             "median_timestamp_offset_hours": np.nan,
             "max_timestamp_offset_hours": np.nan,
             "max_close_diff_bps": np.nan,
             "median_close_diff_bps": np.nan,
+            "rows_over_tolerance": 0,
+            "pct_rows_over_tolerance": np.nan,
+            "worst_session_date": "",
+            "worst_yahoo_close": np.nan,
+            "worst_schwab_close": np.nan,
+            "median_schwab_to_yahoo_close_ratio": np.nan,
             "volume_match_rate": np.nan,
             "status": "no_overlap",
         }
@@ -98,25 +106,40 @@ def compare_symbol(
         / 3600.0
     )
 
-    latest_date_match = (
-        yahoo_daily["session_date"].max()
-        == schwab_daily["session_date"].max()
+    yahoo_latest = yahoo_daily["session_date"].max()
+    schwab_latest = schwab_daily["session_date"].max()
+    latest_date_match = yahoo_latest == schwab_latest
+
+    worst_index = close_diff_bps.idxmax()
+    rows_over_tolerance = int((close_diff_bps > price_tolerance_bps).sum())
+    pct_rows_over_tolerance = rows_over_tolerance / len(merged)
+    close_ratio = (
+        merged["close_schwab"].astype(float)
+        / merged["close_yahoo"].astype(float)
     )
 
     status = (
         "ok"
-        if float(close_diff_bps.max()) <= price_tolerance_bps
+        if rows_over_tolerance == 0
         else "review"
     )
 
     return {
         "symbol": symbol,
         "overlap_rows": len(merged),
+        "yahoo_latest_session": str(yahoo_latest),
+        "schwab_latest_session": str(schwab_latest),
         "latest_date_match": bool(latest_date_match),
         "median_timestamp_offset_hours": float(timestamp_offset_hours.median()),
         "max_timestamp_offset_hours": float(timestamp_offset_hours.max()),
         "max_close_diff_bps": float(close_diff_bps.max()),
         "median_close_diff_bps": float(close_diff_bps.median()),
+        "rows_over_tolerance": rows_over_tolerance,
+        "pct_rows_over_tolerance": float(pct_rows_over_tolerance),
+        "worst_session_date": str(merged.loc[worst_index, "session_date"]),
+        "worst_yahoo_close": float(merged.loc[worst_index, "close_yahoo"]),
+        "worst_schwab_close": float(merged.loc[worst_index, "close_schwab"]),
+        "median_schwab_to_yahoo_close_ratio": float(close_ratio.median()),
         "volume_match_rate": float(volume_match.mean()),
         "status": status,
     }
@@ -137,11 +160,19 @@ def main() -> None:
                 {
                     "symbol": symbol,
                     "overlap_rows": 0,
+                    "yahoo_latest_session": "",
+                    "schwab_latest_session": "",
                     "latest_date_match": False,
                     "median_timestamp_offset_hours": np.nan,
                     "max_timestamp_offset_hours": np.nan,
                     "max_close_diff_bps": np.nan,
                     "median_close_diff_bps": np.nan,
+                    "rows_over_tolerance": 0,
+                    "pct_rows_over_tolerance": np.nan,
+                    "worst_session_date": "",
+                    "worst_yahoo_close": np.nan,
+                    "worst_schwab_close": np.nan,
+                    "median_schwab_to_yahoo_close_ratio": np.nan,
                     "volume_match_rate": np.nan,
                     "status": "missing_source",
                 }
@@ -191,6 +222,10 @@ def main() -> None:
         print(
             "Median volume exact-match rate: "
             f"{comparable['volume_match_rate'].median():.2%}"
+        )
+        print(
+            "Median share of rows > tolerance: "
+            f"{comparable['pct_rows_over_tolerance'].median():.2%}"
         )
 
     review = report.loc[report["status"] != "ok"]
