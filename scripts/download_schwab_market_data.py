@@ -20,6 +20,7 @@ from src.integrations.schwab.auth import (
     load_schwab_auth_config,
 )
 from src.integrations.schwab.provider import SchwabDailyBarProvider
+from src.integrations.schwab.history_policy import resolve_daily_history
 from src.universe.eligibility import EligibilityPolicy, evaluate_basic_eligibility
 from src.universe.symbols import to_schwab_symbol
 from src.utils.hashing import stable_dataframe_hash
@@ -56,12 +57,16 @@ def main() -> None:
         normalized_path = SCHWAB_NORMALIZED_DIR / f"{symbol}_1d.csv"
 
         try:
-            result = provider.fetch(
-                provider_symbol,
-                symbol,
+            resolution = resolve_daily_history(
+                provider,
+                provider_symbol=provider_symbol,
+                canonical_symbol=symbol,
                 start_datetime=start,
                 end_datetime=end,
+                minimum_rows=policy.min_history_rows,
             )
+            result = resolution.selected
+
             raw_hash = save_raw_json(result.raw_payload, raw_path)
             normalized_hash = save_normalized_bars(result.bars, normalized_path)
             eligible, reasons = evaluate_basic_eligibility(result.bars, policy)
@@ -75,6 +80,11 @@ def main() -> None:
                     "schema_version": DATA_SOURCE_SCHEMA_VERSION,
                     "fetched_at_utc": result.fetched_at_utc.isoformat(),
                     "rows": len(result.bars),
+                    "history_request_mode": resolution.request_mode,
+                    "bounded_rows": resolution.initial_rows,
+                    "fallback_rows": (
+                        "" if resolution.fallback_rows is None else resolution.fallback_rows
+                    ),
                     "eligible": eligible,
                     "eligibility_reasons": "|".join(reasons),
                     "raw_payload_hash": raw_hash,
@@ -95,6 +105,9 @@ def main() -> None:
                     "schema_version": DATA_SOURCE_SCHEMA_VERSION,
                     "fetched_at_utc": datetime.now(timezone.utc).isoformat(),
                     "rows": 0,
+                    "history_request_mode": "error",
+                    "bounded_rows": "",
+                    "fallback_rows": "",
                     "eligible": False,
                     "eligibility_reasons": "market_data_error",
                     "raw_payload_hash": "",
