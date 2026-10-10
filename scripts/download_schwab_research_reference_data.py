@@ -13,7 +13,7 @@ from config.data_sources import (
 from config.features import REFERENCE_SYMBOLS
 from src.data.provider_artifacts import save_normalized_bars, save_raw_json
 from src.integrations.schwab.auth import create_schwab_market_data_client, load_schwab_auth_config
-from src.integrations.schwab.provider import normalize_schwab_price_history
+from src.integrations.schwab.research_history_policy import normalize_research_price_history
 from src.utils.hashing import stable_dataframe_hash
 
 
@@ -51,7 +51,7 @@ def main() -> None:
                 end_datetime=end,
             )
             raw_hash = save_raw_json(payload, raw_path)
-            bars = normalize_schwab_price_history(payload, symbol)
+            bars, quarantined = normalize_research_price_history(payload, symbol)
             normalized_hash = save_normalized_bars(bars, normalized_path)
             row_count = len(bars)
         except Exception as exc:
@@ -66,6 +66,15 @@ def main() -> None:
                 "normalized_data_hash": normalized_hash,
                 "raw_path": str(raw_path),
                 "normalized_path": str(normalized_path),
+                "quarantined_rows": (
+                    0 if status != "ok" else len(quarantined)
+                ),
+                "quarantined_dates": (
+                    "" if status != "ok" or quarantined.empty
+                    else "|".join(
+                        sorted(set(quarantined["timestamp"].dt.date.astype(str)))
+                    )
+                ),
                 "status": status,
                 "error": error,
             }
