@@ -6,6 +6,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from config.data_sources import PRIMARY_RESEARCH_PROVIDER
+
 from config.features import (
     ANNUALIZATION_FACTOR,
     ATR_WINDOW,
@@ -281,7 +283,11 @@ def audit_feature_parity(
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Independently audit Phase-2 production feature calculations.")
     parser.add_argument("universe_csv", type=Path)
-    parser.add_argument("--provider", choices=("yahoo", "schwab"), default="yahoo")
+    parser.add_argument(
+        "--provider",
+        choices=("yahoo", "schwab"),
+        default=PRIMARY_RESEARCH_PROVIDER,
+    )
     parser.add_argument(
         "--feature-manifest",
         type=Path,
