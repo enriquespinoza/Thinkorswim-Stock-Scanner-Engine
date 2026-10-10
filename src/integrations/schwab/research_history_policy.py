@@ -9,6 +9,8 @@ from src.data.schema import normalize_daily_bars
 # Research-only session quarantine. Dates belong here only after a preserved raw
 # payload audit demonstrates a systematic provider anomaly across unrelated assets.
 QUARANTINED_SESSION_DATES = {
+    pd.Timestamp("2020-10-21", tz="UTC").date(),
+    pd.Timestamp("2023-01-24", tz="UTC").date(),
     pd.Timestamp("2023-06-05", tz="UTC").date(),
 }
 
