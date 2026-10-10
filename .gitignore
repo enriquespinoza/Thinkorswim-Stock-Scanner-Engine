@@ -235,3 +235,6 @@ reports/scans/**/*.csv
 data/providers/**/raw/*.json
 data/providers/**/normalized/*.csv
 data/providers/**/manifests/*.csv
+
+# Phase 3 generated scoring artifacts
+data/processed/scoring/*.csv
