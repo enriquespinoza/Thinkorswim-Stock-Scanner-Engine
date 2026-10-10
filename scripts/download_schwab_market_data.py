@@ -21,6 +21,7 @@ from src.integrations.schwab.auth import (
 )
 from src.integrations.schwab.provider import SchwabDailyBarProvider
 from src.universe.eligibility import EligibilityPolicy, evaluate_basic_eligibility
+from src.universe.symbols import to_schwab_symbol
 from src.utils.hashing import stable_dataframe_hash
 
 
@@ -49,7 +50,7 @@ def main() -> None:
 
     for record in universe.to_dict(orient="records"):
         symbol = str(record["symbol"])
-        provider_symbol = str(record["provider_symbol"])
+        provider_symbol = to_schwab_symbol(symbol)
 
         raw_path = SCHWAB_RAW_PAYLOAD_DIR / f"{symbol}.json"
         normalized_path = SCHWAB_NORMALIZED_DIR / f"{symbol}_1d.csv"
