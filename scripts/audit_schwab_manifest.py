@@ -123,12 +123,12 @@ def main() -> None:
             f"expected {args.expected_symbols}"
         )
 
-    if not (ok & raw_hashed).all():
+    if not raw_hashed.loc[ok].all():
         raise SystemExit(
             "REVIEW REQUIRED: one or more successful raw payloads lack SHA-256 hashes"
         )
 
-    if not (ok & normalized_hashed).all():
+    if not normalized_hashed.loc[ok].all():
         raise SystemExit(
             "REVIEW REQUIRED: one or more successful normalized histories lack SHA-256 hashes"
         )
