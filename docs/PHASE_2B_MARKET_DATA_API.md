@@ -2,7 +2,7 @@
 
 ## Status
 
-**IN VALIDATION**
+**COMPLETE — FROZEN**
 
 This phase migrates the scanner from a Yahoo-only research feed to a versioned market-data architecture with Schwab as the preferred authenticated source.
 
@@ -128,6 +128,17 @@ FEATURE PARITY AUDIT PASSED
 
 The production Schwab feature output therefore reproduces the independent reference calculations within the configured relative-scale tolerance.
 
-### Remaining cutover gate
+### Cross-provider result and cutover
 
-Schwab is **not yet declared the default research provider**. The Yahoo-vs-Schwab cross-provider market-data audit remains required by the Phase-2B cutover policy. The purpose of that audit is to identify and explain any material differences in overlapping OHLCV observations before the provider role changes.
+The Yahoo-vs-Schwab audit completed across all 503 symbols with zero missing/no-overlap cases.
+
+```text
+clean                          414
+isolated_vendor_difference      80
+localized_adjustment_window      6
+persistent_adjustment_basis      3
+```
+
+The three persistent adjustment-basis cases are HON, PCAR, and SPGI. They are retained as documented provider-adjustment exceptions rather than treated as ingestion failures.
+
+Phase 2B is complete. Schwab V2 is the primary scanner research provider. Yahoo V1 remains a frozen comparison/control baseline and can still be selected explicitly for reproducibility checks.
