@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from config.scoring import FEATURE_GROUPS, SCORING_FEATURES
+from config.scoring import FEATURE_GROUPS, SCORING_FEATURES, SIGNAL_DIRECTIONS
 from config.weight_research import FORWARD_RETURN_HORIZONS
 from src.scoring.normalization import normalize_scoring_snapshot
 
@@ -70,6 +70,8 @@ def _summarize_signal(
     signal_column: str,
     signal_type: str,
     horizon: int,
+    feature_group: str = "",
+    signal_direction: int | None = None,
 ) -> dict[str, object]:
     forward_column = f"forward_return_{horizon}d"
     daily = _daily_signal_metrics(
@@ -78,19 +80,29 @@ def _summarize_signal(
         forward_column=forward_column,
     )
 
+    rank_ic_std = daily["rank_ic"].std(ddof=0)
+    mean_rank_ic = daily["rank_ic"].mean()
+
     return {
         "signal_type": signal_type,
         "signal": signal_name,
+        "feature_group": feature_group,
+        "signal_direction": signal_direction,
         "horizon_days": horizon,
         "scoring_dates": len(daily),
-        "mean_rank_ic": daily["rank_ic"].mean(),
+        "mean_rank_ic": mean_rank_ic,
         "median_rank_ic": daily["rank_ic"].median(),
         "positive_ic_rate": (daily["rank_ic"] > 0.0).mean(),
         "mean_top_bottom_spread": daily["top_bottom_spread"].mean(),
         "positive_spread_rate": (
             daily["top_bottom_spread"] > 0.0
         ).mean(),
-        "rank_ic_std": daily["rank_ic"].std(ddof=0),
+        "rank_ic_std": rank_ic_std,
+        "rank_ic_ir": (
+            mean_rank_ic / rank_ic_std
+            if pd.notna(rank_ic_std) and rank_ic_std > 0.0
+            else np.nan
+        ),
     }
 
 
@@ -131,6 +143,37 @@ def _group_correlation_summary(panel: pd.DataFrame) -> pd.DataFrame:
     )
 
 
+def _feature_correlation_summary(panel: pd.DataFrame) -> pd.DataFrame:
+    feature_columns = [f"z_{feature}" for feature in SCORING_FEATURES]
+    matrices = []
+
+    for _, cross_section in panel.groupby("session_date", sort=True):
+        valid = cross_section[feature_columns].dropna()
+        if len(valid) < 50:
+            continue
+        matrices.append(valid.corr(method="pearson"))
+
+    if not matrices:
+        return pd.DataFrame()
+
+    stacked = np.stack([matrix.to_numpy() for matrix in matrices], axis=0)
+    mean_matrix = np.nanmean(stacked, axis=0)
+
+    return pd.DataFrame(
+        mean_matrix,
+        index=SCORING_FEATURES,
+        columns=SCORING_FEATURES,
+    )
+
+
+def _feature_group_map() -> dict[str, str]:
+    return {
+        feature: group
+        for group, features in FEATURE_GROUPS.items()
+        for feature in features
+    }
+
+
 def main() -> None:
     args = parse_args()
     panel_path = args.research_dir / "historical_scoring_panel.csv"
@@ -140,6 +183,7 @@ def main() -> None:
     normalized = _normalized_panel(panel)
 
     rows: list[dict[str, object]] = []
+    feature_groups = _feature_group_map()
 
     for horizon in FORWARD_RETURN_HORIZONS:
         for group in FEATURE_GROUPS:
@@ -150,6 +194,7 @@ def main() -> None:
                     signal_column=f"group_{group}",
                     signal_type="group",
                     horizon=horizon,
+                    feature_group=group,
                 )
             )
 
@@ -161,6 +206,8 @@ def main() -> None:
                     signal_column=f"z_{feature}",
                     signal_type="feature",
                     horizon=horizon,
+                    feature_group=feature_groups[feature],
+                    signal_direction=SIGNAL_DIRECTIONS[feature],
                 )
             )
 
@@ -170,12 +217,15 @@ def main() -> None:
     )
 
     correlations = _group_correlation_summary(normalized)
+    feature_correlations = _feature_correlation_summary(normalized)
 
     summary_path = args.research_dir / "signal_diagnostics.csv"
     correlation_path = args.research_dir / "group_correlations.csv"
+    feature_correlation_path = args.research_dir / "feature_correlations.csv"
 
     summary.to_csv(summary_path, index=False)
     correlations.to_csv(correlation_path)
+    feature_correlations.to_csv(feature_correlation_path)
 
     print("=" * 100)
     print("PHASE 3C SIGNAL DIAGNOSTICS")
@@ -201,12 +251,37 @@ def main() -> None:
             ].to_string(index=False)
         )
 
+    for horizon in FORWARD_RETURN_HORIZONS:
+        feature_view = summary.loc[
+            (summary["signal_type"] == "feature")
+            & (summary["horizon_days"] == horizon)
+        ].sort_values("mean_rank_ic", ascending=False)
+
+        print()
+        print(f"{horizon}-DAY INDIVIDUAL FEATURE SIGNALS")
+        print(
+            feature_view[
+                [
+                    "feature_group",
+                    "signal",
+                    "signal_direction",
+                    "mean_rank_ic",
+                    "median_rank_ic",
+                    "positive_ic_rate",
+                    "rank_ic_ir",
+                    "mean_top_bottom_spread",
+                    "positive_spread_rate",
+                ]
+            ].to_string(index=False)
+        )
+
     print()
     print("MEAN CROSS-SECTIONAL GROUP CORRELATIONS")
     print(correlations.to_string())
     print()
     print(f"Saved -> {summary_path}")
     print(f"Saved -> {correlation_path}")
+    print(f"Saved -> {feature_correlation_path}")
 
 
 if __name__ == "__main__":
