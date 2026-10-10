@@ -230,3 +230,8 @@ reports/scans/*.csv
 data/raw/**/*.csv
 data/processed/**/*.csv
 reports/scans/**/*.csv
+
+# Provider-versioned generated market data
+data/providers/**/raw/*.json
+data/providers/**/normalized/*.csv
+data/providers/**/manifests/*.csv

@@ -6,6 +6,8 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
+from config.data_sources import PRIMARY_RESEARCH_PROVIDER
+
 from config.features import (
     ANNUALIZATION_FACTOR,
     ATR_WINDOW,
@@ -20,7 +22,8 @@ from config.features import (
     SECTOR_BENCHMARKS,
     VOLATILITY_WINDOWS,
 )
-from config.settings import PROCESSED_DATA_DIR, RAW_DATA_DIR
+from config.settings import PROCESSED_DATA_DIR
+from src.features.data_source import get_feature_data_source
 from src.features.io import load_daily_bars
 
 
@@ -173,15 +176,24 @@ def _same_or_close(production: float, reference: float, tolerance: float) -> tup
 def audit_feature_parity(
     universe_path: Path,
     feature_manifest_path: Path,
+    provider_name: str,
     tolerance: float = 1e-9,
 ) -> None:
     universe = pd.read_csv(universe_path).set_index("symbol")
     manifest = pd.read_csv(feature_manifest_path, keep_default_na=False)
+    source = get_feature_data_source(provider_name)
+
+    if "provider" in manifest.columns:
+        manifest_providers = set(manifest["provider"].astype(str).str.lower())
+        if manifest_providers != {source.name}:
+            raise ValueError(
+                f"Feature manifest provider mismatch: {sorted(manifest_providers)} "
+                f"!= {source.name}"
+            )
 
     reference_symbols = {"SPY", "QQQ", "TLT", "GLD", "SCHD", *SECTOR_BENCHMARKS.values()}
-    reference_dir = RAW_DATA_DIR / "references"
     references = {
-        symbol: load_daily_bars(reference_dir / f"{symbol}_1d.csv", symbol)
+        symbol: load_daily_bars(source.reference_dir / f"{symbol}_1d.csv", symbol)
         for symbol in sorted(reference_symbols)
     }
 
@@ -193,7 +205,7 @@ def audit_feature_parity(
         symbol = str(row["symbol"])
         sector = str(universe.loc[symbol, "sector"])
 
-        raw = load_daily_bars(RAW_DATA_DIR / f"{symbol}_1d.csv", symbol)
+        raw = load_daily_bars(source.bars_dir / f"{symbol}_1d.csv", symbol)
         production = pd.read_csv(row["output_path"])
         production["timestamp"] = pd.to_datetime(production["timestamp"], utc=True)
 
@@ -249,6 +261,7 @@ def audit_feature_parity(
 
     print("=" * 80)
     print("PHASE 2 FEATURE PARITY AUDIT")
+    print(f"Provider: {source.name}")
     print("=" * 80)
     print(f"Symbols audited: {len(manifest)}")
     print(f"Features per symbol: {len(FEATURE_COLUMNS)}")
@@ -271,9 +284,14 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Independently audit Phase-2 production feature calculations.")
     parser.add_argument("universe_csv", type=Path)
     parser.add_argument(
+        "--provider",
+        choices=("yahoo", "schwab"),
+        default=PRIMARY_RESEARCH_PROVIDER,
+    )
+    parser.add_argument(
         "--feature-manifest",
         type=Path,
-        default=PROCESSED_DATA_DIR / "features" / "feature_manifest.csv",
+        default=None,
     )
     parser.add_argument("--tolerance", type=float, default=1e-9)
     return parser.parse_args()
@@ -281,8 +299,12 @@ def parse_args() -> argparse.Namespace:
 
 if __name__ == "__main__":
     args = parse_args()
+    source = get_feature_data_source(args.provider)
+    feature_manifest = args.feature_manifest or (source.feature_dir / "feature_manifest.csv")
+
     audit_feature_parity(
         universe_path=args.universe_csv,
-        feature_manifest_path=args.feature_manifest,
+        feature_manifest_path=feature_manifest,
+        provider_name=args.provider,
         tolerance=args.tolerance,
     )

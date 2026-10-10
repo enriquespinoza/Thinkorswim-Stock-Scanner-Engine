@@ -1,0 +1,17 @@
+{
+  "phase": "2B",
+  "status": "feature_parity_passed_cross_provider_pending",
+  "audit_date": "2026-10-09",
+  "provider": "schwab",
+  "provider_version": "market-data-v1",
+  "eligible_symbols_audited": 498,
+  "features_per_symbol": 37,
+  "comparisons": 18426,
+  "tolerance_relative_scale": 1e-9,
+  "maximum_absolute_difference": 1.907348632812e-06,
+  "failures": 0,
+  "feature_manifest_sha256": "840d2365bd1239932ad94f574fa63a12edd8718145473bdb608f04867f39d765",
+  "market_data_manifest_sha256": "25403e45b6277127ec153ec680438373504fd7db31d476a13b6ca4686ec21d65",
+  "result": "FEATURE PARITY AUDIT PASSED",
+  "remaining_cutover_gate": "Yahoo-vs-Schwab cross-provider market-data audit"
+}
