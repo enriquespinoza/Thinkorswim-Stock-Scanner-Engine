@@ -53,3 +53,33 @@ def test_cross_provider_audit_flags_material_close_difference() -> None:
     assert result["overlap_rows"] == 3
     assert result["status"] == "review"
     assert result["max_close_diff_bps"] > 5.0
+
+
+def test_classifies_single_row_difference_as_isolated() -> None:
+    yahoo = _bars("TEST", 0)
+    schwab = _bars("TEST", 4)
+    schwab.loc[2, "close"] = 102.56
+
+    result = compare_symbol(
+        yahoo,
+        schwab,
+        symbol="TEST",
+        price_tolerance_bps=5.0,
+    )
+
+    assert result["classification"] == "isolated_vendor_difference"
+
+
+def test_classifies_persistent_ratio_shift() -> None:
+    yahoo = _bars("TEST", 0)
+    schwab = _bars("TEST", 4)
+    schwab["close"] = schwab["close"] * 0.95
+
+    result = compare_symbol(
+        yahoo,
+        schwab,
+        symbol="TEST",
+        price_tolerance_bps=5.0,
+    )
+
+    assert result["classification"] == "persistent_adjustment_basis"
