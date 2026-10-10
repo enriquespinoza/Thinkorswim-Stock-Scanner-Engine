@@ -97,6 +97,46 @@ def main() -> None:
             print("FAILED SYMBOLS")
             print(failures[["symbol", "error"]].to_string(index=False))
 
+            print()
+            print("FAILED SYMBOL INVALID-OHLC DATE SUMMARY")
+            date_counts: Counter[str] = Counter()
+            details: list[dict[str, object]] = []
+
+            for record in failures.to_dict(orient="records"):
+                symbol = str(record["symbol"])
+                raw_path = Path(str(record["raw_path"]))
+                invalid = _invalid_candles(raw_path)
+
+                if invalid.empty:
+                    details.append(
+                        {
+                            "symbol": symbol,
+                            "invalid_rows": 0,
+                            "invalid_dates": "",
+                        }
+                    )
+                    continue
+
+                dates = sorted(set(invalid["timestamp"].dt.date.astype(str)))
+                for value in dates:
+                    date_counts[value] += 1
+
+                details.append(
+                    {
+                        "symbol": symbol,
+                        "invalid_rows": len(invalid),
+                        "invalid_dates": "|".join(dates),
+                    }
+                )
+
+            print()
+            print("Invalid-date counts across failed symbols:")
+            for value, count in date_counts.most_common():
+                print(f"  {value}: {count}")
+
+            print()
+            print(pd.DataFrame(details).to_string(index=False))
+
     if reference_path.exists():
         references = pd.read_csv(reference_path, keep_default_na=False)
         failed_refs = references.loc[references["status"] != "ok"]
