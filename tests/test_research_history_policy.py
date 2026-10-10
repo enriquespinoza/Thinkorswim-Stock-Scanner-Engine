@@ -7,6 +7,7 @@ from src.integrations.schwab.research_history_policy import (
 
 
 def _payload(date_ms: int, *, open_: float, high: float, low: float, close: float):
+    next_day = date_ms + 24 * 60 * 60 * 1000
     return {
         "empty": False,
         "candles": [
@@ -17,7 +18,15 @@ def _payload(date_ms: int, *, open_: float, high: float, low: float, close: floa
                 "low": low,
                 "close": close,
                 "volume": 1000,
-            }
+            },
+            {
+                "datetime": next_day,
+                "open": 64.0,
+                "high": 65.0,
+                "low": 63.5,
+                "close": 64.5,
+                "volume": 1100,
+            },
         ],
     }
 
@@ -34,7 +43,7 @@ def test_known_bad_session_is_quarantined() -> None:
 
     bars, quarantined = normalize_research_price_history(payload, "XLC")
 
-    assert bars.empty
+    assert len(bars) == 1
     assert len(quarantined) == 1
     assert quarantined.iloc[0]["timestamp"].date() == pd.Timestamp("2023-06-05").date()
 
