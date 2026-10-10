@@ -16,6 +16,7 @@ def _add_forward_returns(frame: pd.DataFrame) -> pd.DataFrame:
 
     for horizon in FORWARD_RETURN_HORIZONS:
         result[f"forward_return_{horizon}d"] = close.shift(-horizon) / close - 1.0
+        result[f"forward_end_{horizon}d"] = result["timestamp"].shift(-horizon)
 
     return result
 
@@ -85,6 +86,7 @@ def build_historical_scoring_panel(
         *SCORING_FEATURES,
         *(f"group_{group}" for group in FEATURE_GROUPS),
         *(f"forward_return_{horizon}d" for horizon in FORWARD_RETURN_HORIZONS),
+        *(f"forward_end_{horizon}d" for horizon in FORWARD_RETURN_HORIZONS),
         "scoring_complete",
     ]
     return panel[required].sort_values(["session_date", "symbol"]).reset_index(drop=True)
