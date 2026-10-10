@@ -65,7 +65,9 @@ def _daily_metrics(
         if len(valid) < 50:
             continue
 
-        ic = valid["research_score"].corr(valid[forward_column], method="spearman")
+        score_rank = valid["research_score"].rank(method="average")
+        forward_rank = valid[forward_column].rank(method="average")
+        ic = score_rank.corr(forward_rank)
 
         valid = valid.sort_values("research_score", ascending=False)
         basket_size = max(1, int(len(valid) * TOP_QUANTILE))
