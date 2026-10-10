@@ -3,7 +3,6 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from config.data_sources import PRIMARY_RESEARCH_PROVIDER
 from config.weight_research import (
     RESEARCH_CONTRACT_VERSION,
     SURVIVORSHIP_BIAS_WARNING,
