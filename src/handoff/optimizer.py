@@ -1,8 +1,6 @@
 from __future__ import annotations
 
-import hashlib
 import json
-import math
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Mapping
@@ -19,7 +17,7 @@ from config.scanner_handoff import (
     PRIMARY_SIGNAL_NAME,
     SELECTION_POLICY,
 )
-from src.utils.hashing import sha256_file, stable_dataframe_hash
+from src.utils.hashing import sha256_file
 
 
 _REQUIRED_ALPHA_COLUMNS = (
@@ -177,14 +175,6 @@ def _validate_alpha_ranking(
     if result["symbol"].astype(str).str.upper().duplicated().any():
         raise ValueError("Alpha ranking contains duplicate symbols")
 
-    actual_snapshot_hash = stable_dataframe_hash(frame)
-    expected_snapshot_hash = str(manifest["snapshot_sha256"]).lower()
-    if actual_snapshot_hash != expected_snapshot_hash:
-        raise ValueError(
-            "Alpha ranking no longer matches immutable source manifest "
-            f"(expected {expected_snapshot_hash}, got {actual_snapshot_hash})"
-        )
-
     return result
 
 
@@ -210,6 +200,15 @@ def build_candidate_handoff(
     alpha_manifest_path = Path(alpha_manifest_path)
 
     source_manifest = _validate_source_manifest(_read_json(alpha_manifest_path))
+
+    actual_snapshot_hash = sha256_file(alpha_ranking_path)
+    expected_snapshot_hash = source_manifest["snapshot_sha256"]
+    if actual_snapshot_hash != expected_snapshot_hash:
+        raise ValueError(
+            "Alpha ranking no longer matches immutable source manifest "
+            f"(expected {expected_snapshot_hash}, got {actual_snapshot_hash})"
+        )
+
     source = pd.read_csv(alpha_ranking_path, low_memory=False)
     source = _validate_alpha_ranking(source, manifest=source_manifest)
 
