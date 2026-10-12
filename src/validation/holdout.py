@@ -7,7 +7,7 @@ from pathlib import Path
 import pandas as pd
 
 from config.alpha import ALPHA_FREEZE_DATE, ALPHA_SPEC_VERSION
-from src.utils.hashing import stable_dataframe_hash
+from src.utils.hashing import sha256_file
 
 
 class HoldoutNotReadyError(ValueError):
@@ -46,8 +46,6 @@ def write_immutable_holdout_snapshot(
     output_root: Path,
 ) -> tuple[Path, Path, str]:
     session = validate_common_session(snapshot)
-    digest = stable_dataframe_hash(snapshot)
-
     session_dir = output_root / ALPHA_SPEC_VERSION / session.isoformat()
     snapshot_path = session_dir / "alpha_ranking.csv"
     manifest_path = session_dir / "manifest.json"
@@ -58,7 +56,8 @@ def write_immutable_holdout_snapshot(
         )
 
     session_dir.mkdir(parents=True, exist_ok=False)
-    snapshot.to_csv(snapshot_path, index=False)
+    snapshot.to_csv(snapshot_path, index=False, lineterminator="\n")
+    digest = sha256_file(snapshot_path)
 
     manifest = {
         "alpha_spec_version": ALPHA_SPEC_VERSION,
