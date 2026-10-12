@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import json
 
 import numpy as np
 import pandas as pd
@@ -15,6 +16,7 @@ from src.validation.holdout import (
     assert_true_holdout_session,
     write_immutable_holdout_snapshot,
 )
+from src.utils.hashing import sha256_file
 
 
 def _snapshot(rows: int = 100, session: str = "2026-10-12") -> pd.DataFrame:
@@ -67,11 +69,15 @@ def test_holdout_rejects_pre_freeze_sessions() -> None:
 def test_holdout_snapshot_is_immutable(tmp_path: Path) -> None:
     scored = score_alpha_snapshot(_snapshot())
 
-    write_immutable_holdout_snapshot(
+    snapshot_path, manifest_path, digest = write_immutable_holdout_snapshot(
         scored,
         provider="schwab",
         output_root=tmp_path,
     )
+
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    assert digest == sha256_file(snapshot_path)
+    assert manifest["snapshot_sha256"] == digest
 
     with pytest.raises(FileExistsError, match="refusing to overwrite"):
         write_immutable_holdout_snapshot(
