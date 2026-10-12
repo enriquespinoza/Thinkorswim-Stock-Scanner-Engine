@@ -12,7 +12,7 @@ from config.scanner_handoff import (
     HANDOFF_CONTRACT_VERSION,
 )
 from src.handoff.optimizer import write_candidate_handoff
-from src.utils.hashing import stable_dataframe_hash
+from src.utils.hashing import sha256_file
 
 
 def _write_source(tmp_path: Path) -> tuple[Path, Path]:
@@ -44,7 +44,7 @@ def _write_source(tmp_path: Path) -> tuple[Path, Path]:
         "session_date": "2026-10-12",
         "rows": rows,
         "alpha_complete_rows": rows,
-        "snapshot_sha256": stable_dataframe_hash(ranking),
+        "snapshot_sha256": sha256_file(ranking_path),
         "created_at_utc": "2026-10-12T21:00:00+00:00",
         "immutable": True,
     }
