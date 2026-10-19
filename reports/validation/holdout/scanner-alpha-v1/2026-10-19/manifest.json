@@ -1,0 +1,11 @@
+{
+  "alpha_complete_rows": 499,
+  "alpha_freeze_date": "2026-10-09",
+  "alpha_spec_version": "scanner-alpha-v1",
+  "created_at_utc": "2026-10-19T20:15:17.024006+00:00",
+  "immutable": true,
+  "provider": "schwab",
+  "rows": 499,
+  "session_date": "2026-10-19",
+  "snapshot_sha256": "12d2f8ddfec50e7392afbfc7d018cc00969f7da4c71cf2f9396964cbbdbf9881"
+}

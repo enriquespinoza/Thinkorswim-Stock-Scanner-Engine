@@ -1,0 +1,16 @@
+{
+  "as_of_session": "2026-10-19",
+  "candidate_count": 20,
+  "candidate_csv_sha256": "dc81c9a35ff23bb05b2019ccef37dc8451b4a6c154cd646447efe8a8c10be4f8",
+  "candidate_limit": 20,
+  "generated_at_utc": "2026-10-19T20:15:25.731252+00:00",
+  "handoff_contract_version": "scanner-candidate-handoff-v1",
+  "immutable": true,
+  "scanner_alpha_spec_version": "scanner-alpha-v1",
+  "scanner_provider": "schwab",
+  "scanner_snapshot_sha256": "12d2f8ddfec50e7392afbfc7d018cc00969f7da4c71cf2f9396964cbbdbf9881",
+  "selection_policy": "top_ranked_alpha_complete",
+  "source_alpha_manifest": "reports\\validation\\holdout\\scanner-alpha-v1\\2026-10-19\\manifest.json",
+  "source_alpha_manifest_sha256": "8dbf0442349d9c7405eb15a471dbb0f107aa93a047471221a2fc485343de6a48",
+  "source_alpha_ranking": "reports\\validation\\holdout\\scanner-alpha-v1\\2026-10-19\\alpha_ranking.csv"
+}
