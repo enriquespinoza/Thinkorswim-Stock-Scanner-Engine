@@ -285,7 +285,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("universe_csv", type=Path)
     parser.add_argument(
         "--provider",
-        choices=("yahoo", "schwab"),
+        choices=("yahoo", "schwab", "schwab-research"),
         default=PRIMARY_RESEARCH_PROVIDER,
     )
     parser.add_argument(

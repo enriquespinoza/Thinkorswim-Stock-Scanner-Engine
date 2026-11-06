@@ -238,6 +238,25 @@ data/providers/**/manifests/*.csv
 
 # Phase 3 generated scoring artifacts
 data/processed/scoring/*.csv
+# Generated scanner artifacts in nested research directories
+data/raw/**/*.csv
+data/processed/**/*.csv
+reports/scans/**/*.csv
+
+# Provider-versioned generated market data
+data/providers/**/raw/*.json
+data/providers/**/normalized/*.csv
+data/providers/**/manifests/*.csv
+
+# Phase 3 generated scoring artifacts
+data/processed/scoring/*.csv
+
+# Phase 3B generated research artifacts
+reports/research/phase_3b/*.csv
+
+# Phase 3B deep research market-data artifacts
+data/research/**
+data/processed/research/**
 
 # Locally generated CI evidence (hosted reports are artifacts)
 audit-output/
